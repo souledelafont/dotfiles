@@ -40,10 +40,10 @@ else
 	echo "No currently running Tmux sessions !"
 fi
 
-setxkbmap -option ctrl:nocaps
+setxkbmap us -option 'caps:ctrl_modifier'
 
 # COLORS CONFIG
 if [ -n "PS1" ]; then #if statement guards adding these helpers for non interactive shells
-	eval "$(~/.config/base16/base16JM-shell/profile_helper.sh)"
+	eval "$(~/.colors/base16-shell/profile_helper.sh)"
 fi
 base16_atelierseaside_dark

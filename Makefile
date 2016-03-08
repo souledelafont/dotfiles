@@ -9,7 +9,7 @@ install: git-pull\
 
 git-pull:
 	@echo -n "pulling dotfiles..."
-	@git pull
+	@git pull origin master
 
 ~/.config:
 	@echo -n "Making $@..."
