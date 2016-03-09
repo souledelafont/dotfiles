@@ -1,48 +1,16 @@
-install: git-pull\
-	~/.config\
-	~/.vim\
-	~/.zsh\
-	~/.zshrc\
-	~/.oh-my-zsh\
-	~/.tmux\
-	~/.tmux.conf
+dotfilesdir = ~/dotfiles/
+symdir = ~/
+extension = .symlink
+symtars = $(abspath $(wildcard *.symlink))
+symlinks = $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symtars))))
+
+all : $(symlinks)
 
 git-pull:
 	@echo -n "pulling dotfiles..."
 	@git pull origin master
 
-~/.config:
-	@echo -n "Making $@..."
-	@rm -rf ~/.config
-	@ln -sf $(CURDIR)/config $@
-	@echo " Done"
-
-~/.vim:
-	@echo -n "Making $@..."
-	@ln -sf $(CURDIR)/vim $@ 
-	@echo " Done"
-
-~/.zsh:
-	@echo -n "Making $@..."
-	@ln -sf $(CURDIR)/zsh $@
-	@echo " Done"
-
-~/.zshrc:
-	@echo -n "Making $@..."
-	@ln -sf $(CURDIR)/zsh/zshrc $@ 
-	@echo " Done"
-
-~/.oh-my-zsh:
-	@echo -n "Making $@..."
-	@ln -sf $(CURDIR)/oh-my-zsh $@ 
-	@echo " Done"
-
-~/.tmux:
-	@echo -n "Making $@..."
-	@ln -sf $(CURDIR)/tmux $@
-	@echo " Done"
-
-~/.tmux.conf:
-	@echo -n "Making $@..."
-	@ln -sf $(CURDIR)/tmux/tmux.conf $@
+$(symlinks):
+	@echo -n "Linking $@..."
+	@ln -sf $(addprefix $(dotfilesdir),$(subst .,,$(notdir $@))).symlink $@	
 	@echo " Done"
