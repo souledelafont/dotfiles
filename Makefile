@@ -16,8 +16,7 @@ git-pull:
 $(symhpath):
 	@echo -n "Linking $@..."
 	@$(eval stem=$(patsubst .%,%,$(notdir $(addsuffix $(extension),$@))))
-	@echo $(stem)
-	ln -sf $(filter %$(stem),$(symapath)) $@
+	@ln -sf $(filter %$(stem),$(symapath)) $@
 	@echo " Done"
 
 # word wont take % as numeral

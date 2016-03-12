@@ -51,5 +51,3 @@ set -g @tpm_plugins '\
 
 # Initialize TMUX plugin manager
 run '~/.tmux/plugins/tpm/tpm'
-
-

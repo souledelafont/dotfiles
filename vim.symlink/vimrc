@@ -34,11 +34,25 @@ nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
 
 " Quick edit handy files
+nnoremap <leader>emf :e ~/dotfiles/Makefile<cr>
+" git
 nnoremap <leader>evr :e $MYVIMRC<cr>
 nnoremap <leader>evp :e ~/.vim/plugins.vim<cr>
-nnoremap <leader>ez  :e ~/.zshrc<cr>
-nnoremap <leader>emf :e ~/dotfiles/Makefile<cr>
-nnoremap <leader>etm :e ~/dotfiles/tmux/tmux.conf<cr>
+" zshrc
+nnoremap <leader>ezr  :e ~/.zshrc<cr>
+nnoremap <leader>eza  :e ~/dotfiles/zsh/aliases.zsh<cr>
+" tmux
+nnoremap <leader>etc :e ~/.tmux.conf<cr>
+nnoremap <leader>etz :e ~/.tmux/tmux.zsh<cr>
+" git
+nnoremap <leader>egz :e ~/dotfiles/git/git.zsh<cr>
+nnoremap <leader>egcg :e ~/.gitconfig<cr>
+nnoremap <leader>egeg :e ~/.gitexclude<cr>
+nnoremap <leader>egcl :e .git/config<cr>
+nnoremap <leader>egel :e .git/info/exclude<cr>
+" colors and fonts
+nnoremap <leader>ecz :e ~/.colors/colors.zsh<cr>
+nnoremap <leader>efz :e ~/.fonts/fonts.zsh<cr>
 
 " COLOR SCHEME
 let g:airline_powerline_fonts = 1

@@ -1,49 +1,26 @@
+dotfilesdir=~/dotfiles
+
+# OH-MY-ZSH
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="bullet-train"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 export TERM="xterm-256color"
 export BULLETTRAIN_RUBY_SHOW='false'
+export BULLETTRAIN_VIRTUALENV_FG=black
+export BULLETTRAIN_DIR_FG=black
 plugins=(git)
 
-function gf(){
-	gfortran $1 -o ${1:0:-3}x
-}
-alias l='ls -1p'
-alias la='ls -1Ap'
+# source all .zsh files
+# get all files ending in .zsh
+zshexec=( $(find $dotfilesdir -path $dotfilesdir/zsh/oh-my-zsh.symlink -prune -type f -o -name '*.zsh') )
+for zsh in $zshexec; do
+	zsh $zsh
+done
 
 # Virtualenv
 source $(which virtualenvwrapper.sh)
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME
 
-# Tmux sessions
-if tmux ls 2>/dev/null 1>&2; then
-	echo -n "Reloading tmux config..."
-	tmux source ~/.tmux.conf 1>/dev/null
-	echo " Done"
-if [[ -z $TMUX ]]; then # if not in tmux show sessions
-	echo "Currently running Tmux sessions:"
-	tmux ls
-fi
-else
-	echo "No currently running Tmux sessions !"
-fi
-
-# setxkbmap us -option 'caps:ctrl_modifier'
-
-# COLORS CONFIG
-if [ -n "PS1" ]; then #if statement guards adding these helpers for non interactive shells
-	eval "$(~/.colors/base16-shell/profile_helper.sh)"
-fi
-base16_atelierseaside_dark
+setxkbmap us -option 'caps:ctrl_modifier'
