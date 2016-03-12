@@ -9,8 +9,8 @@ Also contains fonts and color schemes.
 clone this repo and make symlinks.
 
   git clone https://github.com/jhalford/dotfiles.git ~/dotfiles
-  cd ~/dotfiles
-  make
+  make link
+  make update
   
 some dependencies will be missing (too large). I intend on adding these as submodules later.
 
