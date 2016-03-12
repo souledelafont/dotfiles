@@ -1,7 +1,7 @@
 # Tmux sessions
 
 if tmux ls 2>/dev/null 1>&2; then
-	echo -n "Reloading tmux config..."
+	echo -n "Loading tmux conf..."
 	tmux source ~/.tmux.conf 1>/dev/null
 	echo " Done"
 if [[ -z $TMUX ]]; then # if not in tmux show sessions

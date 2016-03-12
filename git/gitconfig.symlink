@@ -3,3 +3,5 @@
 [user]
 	name = Jack Halford
 	email = jackhalford7@gmail.com
+[push]
+	default = simple

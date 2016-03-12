@@ -1,7 +1,6 @@
 dotfilesdir=~/dotfiles
 
 # OH-MY-ZSH
-# Path to your oh-my-zsh installation.
 ZSH_THEME="bullet-train"
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
