@@ -1,17 +1,22 @@
 # dotfiles
 
-These are my personal dotfiles, configuration for programs I use too frequently not to configure : zsh, vim, tmux
-
-Also contains fonts and color schemes.
+These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux; fonts and color schemes.
 
 ## Installation
 
 clone this repo and make symlinks.
 
-  git clone https://github.com/jhalford/dotfiles.git ~/dotfiles
-  make link
-  make update
-  
+```
+git clone https://github.com/jhalford/dotfiles.git ~/dotfiles
+make link
+```
+#### Makefile usage
+ 
+`make update` Pull changes from github
+`make link` Looks recursively for files ending in `.symlink`, makes a symlink of that file in `$HOME`.
+
+#### Missing dependencies
+
 some dependencies will be missing (too large). I intend on adding these as submodules later.
 
 - vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim.symlink/bundle/Vundle.vim`
@@ -22,6 +27,10 @@ some dependencies will be missing (too large). I intend on adding these as submo
 - tpm `git clone https://github.com/tmux-plugins/tpm.git ~/dotfiles/tmux/plugins/tpm`
 
 ## Usage
+
+#### Vim
+
+Vundle: add `Plugin 'user/plugin-name'` into plugins.vim, then `:PluginInstall` to install it
 
 #### Fonts
 
