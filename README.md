@@ -2,7 +2,7 @@
 
 These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux; fonts and color schemes.
 
-## Installation
+#### Installation
 
 clone this repo and make symlinks.
 
@@ -26,16 +26,31 @@ some dependencies will be missing (too large). I intend on adding these as submo
 - oh-my-zsh `git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dotfiles/zsh/oh-my-zsh.symlink`
 - tpm `git clone https://github.com/tmux-plugins/tpm.git ~/dotfiles/tmux/plugins/tpm`
 
-## Usage
+## Z-shell (zsh)
 
-#### Vim
+zsh is a generally more user friendly shell than bash, read here about the differences: [Comparison of zsh to other shells](http://zsh.sourceforge.net/FAQ/zshfaq02.html)
 
-Vundle: add `Plugin 'user/plugin-name'` into plugins.vim, then `:PluginInstall` to install it
+##### Installation
 
-#### Fonts
+your default shell is contained in the variable `$SHELL`
+to change it:
+```shell
+chsh -s `which zsh`
+```
+then logout / login to see changes
 
+## Vim
+
+##### Plugin manager : [Vundle](https://github.com/VundleVim/Vundle.vim)
+ - add `Plugin 'user/plugin-name'` into plugins.vim
+ - type `:PluginInstall` to install. (user and plugin-name are searched for on github)
+
+## Fonts
+
+##### [Powerline fonts](https://github.com/powerline/fonts)
 Powerline fonts is a patch for multiple fonts to work with the powerline zsh theme. To use one, go to your terminal profile settings, look for "powerline" in the fonts menu, I like to use 'Inconsolata-g for Powerline g'.
 
-#### Colors
+## Colors
 
-I use a script written by John Morales to switch Base16 fonts easily, type base16_theme_variation to activate a particular colorset, all themes are found at https://chriskempson.github.io/base16/ , variations are dark/light.
+##### [Base 16](https://github.com/chriskempson/base16)
+I use a script written by John Morales to switch Base16 fonts easily, type base16_theme_variation to activate a particular colorset, [base 16 color viewer](https://chriskempson.github.io/base16/)
