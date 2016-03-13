@@ -45,6 +45,13 @@ then logout / login to see changes
  - add `Plugin 'user/plugin-name'` into plugins.vim
  - type `:PluginInstall` to install. (user and plugin-name are searched for on github)
 
+## Tmux
+
+##### Plugin manager : [tpm](https://github.com/tmux-plugins/tpm)
+
+add them at the bottom of `~/.tmux.conf`
+`prefix+I` like **I**nstall to fetch plugins
+
 ## Fonts
 
 ##### [Powerline fonts](https://github.com/powerline/fonts)
