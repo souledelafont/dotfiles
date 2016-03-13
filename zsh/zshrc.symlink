@@ -14,7 +14,7 @@ plugins=(git)
 # get all files ending in .zsh
 zshexec=( $(find $dotfilesdir -path $dotfilesdir/zsh/oh-my-zsh.symlink -prune -type f -o -name '*.zsh') )
 for zsh in $zshexec; do
-	zsh $zsh
+	source $zsh
 done
 
 # Virtualenv
