@@ -1,12 +1,12 @@
-" To reload vimrc at every save
+" Reload vimrc at every save
 augroup reload_vimrc " {
 	autocmd!
 	autocmd BufWritePost $MYVIMRC source $MYVIMRC
+	autocmd BufWritePost ~/vim/aliases.vim source $MYVIMRC
 augroup END " }
-" Plugins managed by Vundle
-source ~/.vim/plugins.vim
+"
 
-" Basic editor options
+" Vim options
 set encoding=utf-8
 syntax on				" syntax highlighting
 set number				" adds numbers to left side
@@ -18,48 +18,14 @@ set cursorline			" show line of cursor
 set showmatch			" highlights matching brackets
 set hlsearch			" highlight search
 
-" Sortcuts
-let mapleader = " "
-nnoremap j gj
-nnoremap k gk
-inoremap jk <esc>
-nnoremap <leader><space> :nohlsearch<cr>
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q!<cr>
-nnoremap <leader>\| :vsp<cr>
-nnoremap <leader>_ :sp<cr>
-nnoremap <leader>h :wincmd h<cr>
-nnoremap <leader>j :wincmd j<cr>
-nnoremap <leader>k :wincmd k<cr>
-nnoremap <leader>l :wincmd l<cr>
+" Source vim aliases
+source ~/.vim/aliases.vim
 
-" Quick edit handy files
-nnoremap <leader>emf :e ~/dotfiles/Makefile<cr>
-" git
-nnoremap <leader>evr :e $MYVIMRC<cr>
-nnoremap <leader>evp :e ~/.vim/plugins.vim<cr>
-" zshrc
-nnoremap <leader>ezr  :e ~/.zshrc<cr>
-nnoremap <leader>eza  :e ~/dotfiles/zsh/aliases.zsh<cr>
-" tmux
-nnoremap <leader>etc :e ~/.tmux.conf<cr>
-nnoremap <leader>etz :e ~/.tmux/tmux.zsh<cr>
-" git
-nnoremap <leader>egz :e ~/dotfiles/git/git.zsh<cr>
-nnoremap <leader>ega :e ~/dotfiles/git/aliases.zsh<cr>
-nnoremap <leader>egcg :e ~/.gitconfig<cr>
-nnoremap <leader>egeg :e ~/.gitexclude<cr>
-nnoremap <leader>egcl :e .git/config<cr>
-nnoremap <leader>egel :e .git/info/exclude<cr>
-" colors and fonts
-nnoremap <leader>ecz :e ~/.colors/colors.zsh<cr>
-nnoremap <leader>efz :e ~/.fonts/fonts.zsh<cr>
+" Source vim plugins
+source ~/.vim/plugins.vim
 
-" COLOR SCHEME
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
-if filereadable(expand("~/.vim/vimrc_background"))
+" Source vim colors
+if filereadable(expand("~/.vimrc_background"))
 	let base16colorspace=256
-	source ~/.vim/vimrc_background
+	source ~/.vimrc_background
 endif

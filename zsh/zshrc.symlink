@@ -8,6 +8,7 @@ export TERM="xterm-256color"
 export BULLETTRAIN_RUBY_SHOW='false'
 export BULLETTRAIN_VIRTUALENV_FG=black
 export BULLETTRAIN_DIR_FG=black
+export BULLETTRAIN_PROMPT_CHAR='↦'
 plugins=(git)
 
 # source all .zsh files
@@ -18,8 +19,11 @@ for zsh in $zshexec; do
 done
 
 # Virtualenv
-source $(which virtualenvwrapper.sh)
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+source $(which virtualenvwrapper.sh)
 
 setxkbmap us -option 'caps:ctrl_modifier'
+
+cd ~

@@ -6,11 +6,11 @@ if [ -n "PS1" ]; then #if statement guards adding these helpers for non interact
 fi
 echo " Done"
 
-theme=monokai
+theme=isotope
 variant=dark
 
 echo -n 'Setting colorscheme: base16_'"$theme"'_'"$variant"'...'
 base16_"$theme"_"$variant"
 echo " Done"
 
-alias colortest="./dotfiles/colors.symlink/base16-shell/colortest"
+alias colortest="~/dotfiles/colors.symlink/base16-shell/colortest"
