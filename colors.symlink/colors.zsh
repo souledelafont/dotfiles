@@ -6,7 +6,7 @@ if [ -n "PS1" ]; then #if statement guards adding these helpers for non interact
 fi
 echo " Done"
 
-theme=isotope
+theme=google
 variant=dark
 
 echo -n 'Setting colorscheme: base16_'"$theme"'_'"$variant"'...'

@@ -13,6 +13,8 @@ nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
 
+nnoremap <leader>c :!gcc % && ./a.out<cr>
+
 " Quick tab change with leader
 for i in range(1,9) 
 	execute 'nnoremap <leader>'.i.' '.i.'gt'

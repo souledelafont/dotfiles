@@ -11,19 +11,28 @@ export BULLETTRAIN_DIR_FG=black
 export BULLETTRAIN_PROMPT_CHAR='↦'
 plugins=(git)
 
-# source all .zsh files
-# get all files ending in .zsh
+# get *.zsh but not in oh-my-zsh/
 zshexec=( $(find $dotfilesdir -path $dotfilesdir/zsh/oh-my-zsh.symlink -prune -type f -o -name '*.zsh') )
+# source all .zsh files
 for zsh in $zshexec; do
 	source $zsh
 done
 
 # Virtualenv
+# reloading zsh kills deactivate command
+# must read wrapper doc...
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-source $(which virtualenvwrapper.sh)
+if [ -z "$VIRTUAL_ENV" ]; then
+	echo -n "Loading VirtualEnv Wrapper..."
+	source $(which virtualenvwrapper.sh)
+	echo " Done"
+fi
 
+# Change capslock to CTRL !
+# need to find a way to do this on any machine
 setxkbmap us -option 'caps:ctrl_modifier'
 
+# must be a better way to do this...
 cd ~
