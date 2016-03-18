@@ -8,6 +8,7 @@ clone this repo and make symlinks.
 
 ```
 git clone https://github.com/jhalford/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 make link
 ```
 #### Makefile usage
