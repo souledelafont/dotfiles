@@ -21,11 +21,11 @@ make link
 some dependencies will be missing (too large). I intend on adding these as submodules later.
 
 - vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim.symlink/bundle/Vundle.vim`
-- base16-shell `git clone https://github.com/JohnMorales/base16-shell.git ~/dotfiles/colors/base16-shell`
-- powerline fonts `git clone https://github.com/powerline/fonts.git ~/dotfiles/fonts/powerline-fonts`
+- base16-shell `git clone https://github.com/JohnMorales/base16-shell.git ~/dotfiles/colors.symlink/base16-shell`
+- powerline fonts `git clone https://github.com/powerline/fonts.git ~/dotfiles/fonts.symlink/powerline-fonts`
 - bullet train `git clone https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git ~/dotfiles/zsh/bullet-train-oh-my-zsh-theme`
 - oh-my-zsh `git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dotfiles/zsh/oh-my-zsh.symlink`
-- tpm `git clone https://github.com/tmux-plugins/tpm.git ~/dotfiles/tmux/plugins/tpm`
+- tpm `git clone https://github.com/tmux-plugins/tpm.git ~/dotfiles/tmux.symlink/plugins/tpm`
 
 ## Z-shell (zsh)
 
