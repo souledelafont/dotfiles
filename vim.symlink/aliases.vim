@@ -22,7 +22,7 @@ endfor
 nnoremap <leader>tn :tabedit<space>
 
 " Quick edit handy files
-nnoremap <leader>emf :e ~/dotfiles/Makefile<cr>
+nnoremap <leader>emf :e ~/dotfiles/makefile<cr>
 " vim
 nnoremap <leader>evr :e $MYVIMRC<cr>
 nnoremap <leader>evp :e ~/.vim/plugins.vim<cr>
