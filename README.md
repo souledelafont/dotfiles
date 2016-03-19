@@ -1,8 +1,17 @@
 # Dotfiles
 
 These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux, as well as fonts and color schemes.
+**features** : topical orginizations, auto-sourcing zsh files
 
-## Installation
+## topical
+
+Everything's built around topic areas. If you're adding a new area to your
+forked dotfiles — say, "Java" — you can simply add a `java` directory and put
+files in there. Anything with an extension of `.zsh` will get automatically
+included into your shell. Anything with an extension of `.symlink` will get
+symlinked without extension into `$HOME` when you run `make link`.
+
+## install
 
 ```
 git clone https://github.com/jhalford/dotfiles.git ~/dotfiles
@@ -19,7 +28,7 @@ chsh -s `which zsh`
 ```
 then logout / login to see changes
 
-### Dependencies
+### Components
 
 Use `make wipe-install` to erase and clone all dependencies. (This solution is shitty, intention is to implement them as git-submodules later on).
 
