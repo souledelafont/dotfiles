@@ -44,24 +44,16 @@ All the dependencies :
 | [tpm](https://github.com/tmux-plugins/tpm.git) | Tmux plugin manager |
 
 #### Makefile usage
- 
 `make help` briefly explains how to use the makefile
 
-## Z-shell (zsh)
+### Z-shell (zsh)
 
 zsh is a generally more user friendly shell than bash, read here about the differences: [Comparison of zsh to other shells](http://zsh.sourceforge.net/FAQ/zshfaq02.html)
 
-## Vim plugin manager : [Vundle](https://github.com/VundleVim/Vundle.vim)
- - add `Plugin 'user/plugin-name'` into plugins.vim
- - type `:PluginInstall` to install. (user and plugin-name are searched for on github)
+### [Powerline fonts](https://github.com/powerline/fonts)
 
-## Tmux plugin manager : [tpm](https://github.com/tmux-plugins/tpm)
-
-add plugins at the bottom of `~/.tmux.conf`
-`prefix+I` like **I**nstall to fetch plugins
-
-## [Powerline fonts](https://github.com/powerline/fonts)
 Powerline fonts is a patch for multiple fonts to work with the powerline zsh theme. To use one, go to your terminal profile settings, look for "powerline" in the fonts menu, I like to use 'Inconsolata-g for Powerline g'.
 
-## [Base16 Colors](https://github.com/chriskempson/base16)
+### [Base16 Colors](https://github.com/chriskempson/base16)
+
 I use a script written by John Morales to switch Base16 fonts easily, type base16_theme_variation to activate a particular colorset, [base 16 color viewer](https://chriskempson.github.io/base16/)
