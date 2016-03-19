@@ -54,6 +54,6 @@ zsh is a generally more user friendly shell than bash, read here about the diffe
 
 Powerline fonts is a patch for multiple fonts to work with the powerline zsh theme. To use one, go to your terminal profile settings, look for "powerline" in the fonts menu, I like to use 'Inconsolata-g for Powerline g'.
 
-### [Base16 Colors](https://github.com/chriskempson/base16)
+### [Base16 Colors](https://github.com/JohnMorales/base16-shell.git)
 
 I use a script written by John Morales to switch Base16 fonts easily, type base16_theme_variation to activate a particular colorset, [base 16 color viewer](https://chriskempson.github.io/base16/)
