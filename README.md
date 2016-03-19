@@ -14,8 +14,7 @@ make link
 ```
 #### Makefile usage
  
-`make update` Pull changes from github
-`make link` Looks recursively for files ending in `.symlink`, makes a symlink of that file in `$HOME`.
+`make help` briefly explains how to use the makefile
 
 #### Missing dependencies
 
