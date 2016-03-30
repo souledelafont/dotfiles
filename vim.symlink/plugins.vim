@@ -1,3 +1,4 @@
+" Plugins
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,16 +18,15 @@ Plugin 'edkolev/tmuxline.vim'
 call vundle#end()
 filetype plugin indent on
 
-" Theme settings 
+" Plugin settings
+" vim-airline settings 
 let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 set noshowmode
 let g:bufferline_echo = 0
 
-" CtrlP settings
+" ctrlp settings
 let g:ctrlp_map = '<leader>p'
 
 " NERDTree settings
 nnoremap <leader>n :NERDTreeTabsToggle<cr>
-let NERDTreeMapactivateNode='<leader>'
