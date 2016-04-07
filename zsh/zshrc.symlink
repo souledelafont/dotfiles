@@ -7,6 +7,7 @@ export BULLETTRAIN_RUBY_SHOW='false'
 export BULLETTRAIN_VIRTUALENV_FG=black
 export BULLETTRAIN_DIR_FG=black
 export BULLETTRAIN_PROMPT_CHAR='↦'
+BULLETTRAIN_DIR_CONTEXT_SHOW=true
 if [ ! -f $ZSH/themes/bullet-train.zsh-theme ]; then
 	cd $dotfilesdir/zsh/bullet-train-oh-my-zsh-theme
 	make install
