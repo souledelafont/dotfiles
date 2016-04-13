@@ -1,7 +1,7 @@
 # Dotfiles
 
 These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux, as well as fonts and color schemes.
-**features** : topical orginizations, auto-sourcing zsh files
+**features** : topical organization, auto-sourcing zsh files
 
 ## topical
 
@@ -19,7 +19,7 @@ typical organizations goes as:
 ## install
 
 ```
-git clone -recursive https://github.com/jhalford/dotfiles.git ~/dotfiles
+git clone --recursive https://github.com/jhalford/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 make backup
 make wipe-install
