@@ -34,7 +34,7 @@ then logout / login to see changes.
 
 ## Components
 
-Use `make wipe-install` to erase and clone all dependencies. (This solution is shitty, intention is to implement them as **git-submodules** later on).
+All the exterior components are implemented as "git submodules".
 
 | Component | What is it ? |
 |--------|-----|
@@ -47,6 +47,7 @@ Use `make wipe-install` to erase and clone all dependencies. (This solution is s
 
 #### Makefile usage
 `make help` briefly explains how to use the makefile
+
 `make update` will updqte the dotfiles AND all of the dependencies
 
 ### Z-shell (zsh)
