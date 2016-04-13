@@ -22,7 +22,6 @@ typical organizations goes as:
 git clone --recursive https://github.com/jhalford/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 make backup
-make wipe-install
 make link
 ```
 
@@ -48,6 +47,7 @@ Use `make wipe-install` to erase and clone all dependencies. (This solution is s
 
 #### Makefile usage
 `make help` briefly explains how to use the makefile
+`make update` will updqte the dotfiles AND all of the dependencies
 
 ### Z-shell (zsh)
 
