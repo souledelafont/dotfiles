@@ -22,7 +22,10 @@ link: $(symhpath)
 update:
 	@echo -n "pulling dotfiles..."
 	@git pull origin master
-	@$(shell git submodule foreach git pull origin master)
+	@echo -n "iniatializing submodules..."
+	@git submodule init
+	@echo -n "updating submodules..."
+	@git submodule update
 
 $(symhpath):
 	@echo -n "Linking $@..."
