@@ -19,7 +19,7 @@ typical organizations goes as:
 ## install
 
 ```
-git clone https://github.com/jhalford/dotfiles.git ~/dotfiles
+git clone -recursive https://github.com/jhalford/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 make backup
 make wipe-install
