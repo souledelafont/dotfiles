@@ -36,10 +36,10 @@ backup:
 	@$(shell mv -t$(HOME)/.backup $(symhpath) 2>/dev/null)
 
 wipe-install:
-	@rm -rf ~/dotfiles/vim.symlink/bundle/Vundle.vim ~/dotfiles/colors.symlink/base16-shell ~/dotfiles/fonts.symlink/powerline-fonts ~/dotfiles/zsh/bullet-train-oh-my-zsh-theme ~/dotfiles/zsh/oh-my-zsh.symlink ~/dotfiles/tmux.symlink/plugins/tpm
+	@rm -rf ~/dotfiles/vim.symlink/bundle/Vundle.vim ~/dotfiles/colors.symlink/base16-shell ~/dotfiles/fonts.symlink/powerline-fonts ~/dotfiles/tmux.symlink/plugins/tpm
 	@git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim.symlink/bundle/Vundle.vim
 	@git clone https://github.com/JohnMorales/base16-shell.git ~/dotfiles/colors.symlink/base16-shell
 	@git clone https://github.com/powerline/fonts.git ~/dotfiles/fonts.symlink/powerline-fonts
-	@git clone https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git ~/dotfiles/zsh/bullet-train-oh-my-zsh-theme
-	@git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dotfiles/zsh/oh-my-zsh.symlink
+	# @git clone https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git ~/dotfiles/zsh/bullet-train-oh-my-zsh-theme
+	# @git clone https://github.com/robbyrussell/oh-my-zsh.git ~/dotfiles/zsh/oh-my-zsh.symlink
 	@git clone https://github.com/tmux-plugins/tpm.git ~/dotfiles/tmux.symlink/plugins/tpm
