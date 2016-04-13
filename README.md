@@ -46,9 +46,8 @@ All the exterior components are implemented as "git submodules".
 | [tpm](https://github.com/tmux-plugins/tpm.git) | Tmux plugin manager |
 
 #### Makefile usage
-`make help` briefly explains how to use the makefile
-
-`make update` will updqte the dotfiles AND all of the dependencies
+`make help` briefly explains how to use the makefile  
+`make update` will update the dotfiles AND all of the dependencies
 
 ### Z-shell (zsh)
 
