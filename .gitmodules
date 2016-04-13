@@ -7,12 +7,12 @@
 [submodule "tmux.symlink/plugins/tpm"]
 	path = tmux.symlink/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
-[submodule "/Users/jack/dotfiles/fonts.symlink/powerline-fonts"]
+[submodule "fonts.symlink/powerline-fonts"]
 	path = fonts.symlink/powerline-fonts
 	url = https://github.com/powerline/fonts.git
-[submodule "/Users/jack/dotfiles/colors.symlink/base16-shell"]
+[submodule "colors.symlink/base16-shell"]
 	path = colors.symlink/base16-shell
 	url = https://github.com/JohnMorales/base16-shell.git
-[submodule "/Users/jack/dotfiles/vim.symlink/bundle/Vundle.vim"]
+[submodule "vim.symlink/bundle/Vundle.vim"]
 	path = vim.symlink/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
