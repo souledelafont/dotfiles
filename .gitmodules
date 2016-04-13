@@ -4,3 +4,15 @@
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "/Users/jack/dotfiles/tmux.symlink/plugins/tpm"]
+	path = /Users/jack/dotfiles/tmux.symlink/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "/Users/jack/dotfiles/fonts.symlink/powerline-fonts"]
+	path = /Users/jack/dotfiles/fonts.symlink/powerline-fonts
+	url = https://github.com/powerline/fonts.git
+[submodule "/Users/jack/dotfiles/colors.symlink/base16-shell"]
+	path = /Users/jack/dotfiles/colors.symlink/base16-shell
+	url = https://github.com/JohnMorales/base16-shell.git
+[submodule "/Users/jack/dotfiles/vim.symlink/bundle/Vundle.vim"]
+	path = /Users/jack/dotfiles/vim.symlink/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
