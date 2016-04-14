@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/jack/.gitexclude
+	excludesfile = /home/jack/.gitexclude
 [user]
 	name = Jack Halford
 	email = jackhalford7@gmail.com

@@ -19,13 +19,18 @@ help:
 
 link: $(symhpath)
 
-update:
+update: update-submodules pull-project
+
+pull-project:
 	@echo -n "pulling dotfiles..."
 	@git pull origin master
+
+update-submodules:
 	@echo -n "iniatializing submodules..."
 	@git submodule init
 	@echo -n "updating submodules..."
 	@git submodule update
+
 
 $(symhpath):
 	@echo -n "Linking $@..."
