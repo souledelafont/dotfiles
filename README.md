@@ -1,6 +1,6 @@
 # Dotfiles
 
-These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux, as well as fonts and color schemes.
+These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux, as well as fonts and color schemes.  
 **features** : topical organization, auto-sourcing zsh files
 
 ## topical
@@ -8,7 +8,7 @@ These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux
 Everything's built around topic areas. If you're adding a new area to your
 forked dotfiles — say, "Java" — you can simply add a `java` directory and put
 files in there. Anything with an extension of `.zsh` will get automatically
-included into your shell. Anything with an extension of `.symlink` will get
+sourced. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `make link`.
 
 typical organizations goes as:
