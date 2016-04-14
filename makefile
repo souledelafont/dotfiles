@@ -6,7 +6,7 @@ bulletpath := $(dotfilesdir)zsh/oh-my-zsh.symlink/themes/bullet-train.zsh-theme
 # find all .symlink files recursively with shell command find
 symrpath := $(patsubst ./%,%,$(shell find . -name '*$(extension)'))
 symapath := $(addprefix $(dotfilesdir),$(symrpath))
-symhpath := $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symrpath))))
+symhpath := $(sort $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symrpath)))))
 
 help:
 	@echo "DOTFILES MAKEFILE USAGE:"
