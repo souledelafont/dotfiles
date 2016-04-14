@@ -26,10 +26,9 @@ pull-project:
 	@git pull origin master
 
 update-submodules:
-	@echo -n "iniatializing submodules..."
-	@git submodule init
 	@echo -n "updating submodules..."
-	@git submodule update
+	@git submodule update --init
+	@echo " Done"
 
 
 $(symhpath):

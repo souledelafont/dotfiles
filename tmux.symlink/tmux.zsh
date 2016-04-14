@@ -1,12 +1,11 @@
 # Tmux sessions
 
 if tmux ls 2>/dev/null 1>&2; then
-	echo -n "Loading tmux conf..."
-	tmux source ~/.tmux.conf 1>/dev/null
-	echo " Done"
+	loadconf "tmux conf" "tmux source ~/.tmux.conf 1>/dev/null"
+
 if [[ -z $TMUX ]]; then # if not in tmux show sessions
 	echo "Currently running Tmux sessions:"
-	tmux ls
+	$info tmux ls$normal
 fi
 else
 	echo "No currently running Tmux sessions !"

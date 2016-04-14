@@ -1,5 +1,24 @@
 dotfilesdir=~/dotfiles
-#
+red="\e[0;31m"
+black="\e[0;30m"
+green="\e[0;32m"
+white="\e[1;37m"
+blue="\e[0;34m"
+nocolor="\e[0m"
+
+normal=$nocolor
+success=$green
+warning=$red
+info=$blue
+
+# goto function for loading an exterior config
+# 1st arg is name, 2nd is sourcing cmd
+loadconf () {
+	echo -n "Loading $1..."
+	eval $2
+	echo "$success Done$normal"
+}
+
 # OH-MY-ZSH
 export ZSH=$HOME/.oh-my-zsh
 export TERM="xterm-256color"
@@ -13,7 +32,7 @@ if [ ! -f $ZSH/themes/bullet-train.zsh-theme ]; then
 	make install
 fi
 ZSH_THEME="bullet-train"
-plugins=(git)
+plugins=(git history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # get *.zsh but not in oh-my-zsh/
@@ -32,13 +51,11 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 if [ -z "$VIRTUAL_ENV" ]; then
-	echo -n "Loading VirtualEnv Wrapper..."
-	source $(which virtualenvwrapper.sh)
-	echo " Done"
+	loadconf "virtualenv wrapper" "source `which virtualenvwrapper.sh`"
 fi
 
 # Change capslock to CTRL !
-# need to find a way to do this on any machine
+# need to find a way to do this on any machine (ie mac os)
 setxkbmap us -option 'caps:ctrl_modifier'
 
 # must be a better way to do this...
