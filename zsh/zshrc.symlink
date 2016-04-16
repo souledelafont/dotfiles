@@ -6,10 +6,10 @@ white="\e[1;37m"
 blue="\e[0;34m"
 nocolor="\e[0m"
 
-normal=$nocolor
-success=$green
-warning=$red
-info=$blue
+export normal=$nocolor
+export success=$green
+export warning=$red
+export info=$blue
 
 # goto function for loading an exterior config
 # 1st arg is name, 2nd is sourcing cmd
