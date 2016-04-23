@@ -60,25 +60,3 @@ Powerline fonts is a patch for multiple fonts to work with the powerline zsh the
 ### [Base16 Colors](https://github.com/JohnMorales/base16-shell.git)
 
 Base16 is a collection of beautiful 16-color sets, useable throughout the shell. John Morales wrote a neat script to switch Base16 fonts easily, type `base16_theme_variation` to activate a particular colorset, most themes can be previewed here : [base 16 color viewer](https://chriskempson.github.io/base16/)
-
-------------------------------------------------------------------------------
-Oh My Zsh Distribution Notes
-------------------------------------------------------------------------------
-
-What you are looking at now is Oh My Zsh's repackaging of zsh-history-substring-search 
-as an OMZ module inside the Oh My Zsh distribution.
-
-The upstream repo, zsh-users/zsh-history-substring-search, can be found on GitHub at 
-https://github.com/zsh-users/zsh-history-substring-search.
-
-This downstream copy was last updated from the following upstream commit:
-
-  SHA:          f5c164d4c3af1f5bd068ee10f88b4c7b3a1fd841
-  Commit date:  2016-03-06 22:33:47 -0800
-
-Everything above this section is a copy of the original upstream's README, so things
-may differ slightly when you're using this inside OMZ. In particular, you do not
-need to set up key bindings for the up and down arrows yourself in `~/.zshrc`; the OMZ 
-plugin does that for you. You may still want to set up additional emacs- or vi-specific
-bindings as mentioned above.
-
