@@ -16,7 +16,7 @@ nnoremap <leader>l :wincmd l<cr>
 nnoremap <leader>i :set list!<cr>
 
 " Aliases for compiling
-autocmd FileType c nnoremap <leader>c :!gcc % && ./a.out<cr>
+autocmd FileType c nnoremap <leader>c :!clear && gcc -Wall -Wextra -Werror *.c && ./a.out<cr>
 
 " Aliases for tabs
 for i in range(1,9)
