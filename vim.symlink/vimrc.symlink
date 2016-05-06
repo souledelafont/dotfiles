@@ -18,6 +18,8 @@ set showmatch			" highlights matching brackets
 set hlsearch			" highlight search
 set listchars=tab:▸\ ,eol:¬
 
+let fortran_free_source=1 " good fortran highlighting on first open
+
 " Aliases
 source ~/.vim/aliases.vim
 
