@@ -16,8 +16,8 @@ nnoremap <leader>l :wincmd l<cr>
 nnoremap <leader>i :set list!<cr>
 
 " Aliases for compiling
-autocmd FileType c nnoremap <leader>c :!ccc<cr>
-autocmd FileType fortran nnoremap <leader>c :!fff<cr>
+autocmd FileType c nnoremap <leader>c :!clear && gcc -Wall -Wextra -Werror *.c && ./a.out<cr>
+autocmd FileType fortran nnoremap <leader>c :!clear && gfortran % && ./a.out<cr>
 
 " Aliases for tabs
 for i in range(1,9)
@@ -32,6 +32,7 @@ nnoremap <leader>evp :e ~/.vim/plugins.vim<cr>
 nnoremap <leader>eva :e ~/.vim/aliases.vim<cr>
 nnoremap <leader>ezr  :e ~/.zshrc<cr>
 nnoremap <leader>eza  :e ~/dotfiles/zsh/aliases.zsh<cr>
+nnoremap <leader>ezc  :e ~/dotfiles/zsh/quick-compile.zsh<cr>
 nnoremap <leader>etc :e ~/.tmux.conf<cr>
 nnoremap <leader>etz :e ~/.tmux/tmux.zsh<cr>
 nnoremap <leader>efa :e ~/dotfiles/fortran/aliases.zsh<cr>
