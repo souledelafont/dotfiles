@@ -30,6 +30,7 @@ nnoremap <leader>emf :e ~/dotfiles/makefile<cr>
 nnoremap <leader>evr :e $MYVIMRC<cr>
 nnoremap <leader>evp :e ~/.vim/plugins.vim<cr>
 nnoremap <leader>eva :e ~/.vim/aliases.vim<cr>
+nnoremap <leader>evf :e ~/.vim/myfiletypes.vim<cr>
 nnoremap <leader>ezr  :e ~/.zshrc<cr>
 nnoremap <leader>eza  :e ~/dotfiles/zsh/aliases.zsh<cr>
 nnoremap <leader>ezc  :e ~/dotfiles/zsh/quick-compile.zsh<cr>
@@ -37,6 +38,7 @@ nnoremap <leader>etc :e ~/.tmux.conf<cr>
 nnoremap <leader>etz :e ~/.tmux/tmux.zsh<cr>
 nnoremap <leader>efa :e ~/dotfiles/fortran/aliases.zsh<cr>
 nnoremap <leader>egz :e ~/dotfiles/git/git.zsh<cr>
+
 nnoremap <leader>ega :e ~/dotfiles/git/aliases.zsh<cr>
 nnoremap <leader>egcg :e ~/.gitconfig<cr>
 nnoremap <leader>egeg :e ~/.gitexclude<cr>
