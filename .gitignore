@@ -6,3 +6,5 @@
 # *~
 vim.symlink/bundle/*
 !vim.symlink/bundle/Vundle.vim
+tmux.symlink/plugins/*
+!tmux.symlink/plugins/tpm

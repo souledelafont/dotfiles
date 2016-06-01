@@ -3,13 +3,16 @@ augroup reload_vimrc " {
 	autocmd!
 	autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
-"
+
+" Syntax
+let myfiletypefile = "~/.vim/myfiletypes.vim"
+filetype on
+syntax on
 
 " Options
+autocmd BufEnter * set relativenumber
 set encoding=utf-8
-syntax on				" syntax highlighting
 set number				" adds numbers to left side
-set relativenumber		" relative numbers instead
 set clipboard=unnamed	" clipboard to anywhere
 set tabstop=4			" number of visual tabs
 set shiftwidth=4		" number of spaces for 1 tab
@@ -17,6 +20,8 @@ set cursorline			" show line of cursor
 set showmatch			" highlights matching brackets
 set hlsearch			" highlight search
 set listchars=tab:▸\ ,eol:¬
+
+let fortran_free_source=1 " good fortran highlighting on first open
 
 " Aliases
 source ~/.vim/aliases.vim

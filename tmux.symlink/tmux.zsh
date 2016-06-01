@@ -11,3 +11,4 @@ echo $normal
 else
 	echo "No currently running Tmux sessions !"
 fi
+

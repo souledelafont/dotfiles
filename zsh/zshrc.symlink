@@ -1,3 +1,5 @@
+tmux attach -t base || tmux new -s base
+
 dotfilesdir=~/dotfiles
 red="\e[0;31m"
 black="\e[0;30m"

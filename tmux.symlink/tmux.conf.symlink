@@ -39,7 +39,9 @@ bind M\
 # List of plugins
 set -g @tpm_plugins '\
 	tmux-plugins/tpm\
+	tmux-plugins/tmux-resurrect\
 '
+set -g @resurrect-strategy-vim 'session'
 
 # Initialize TMUX plugin manager
 run '~/.tmux/plugins/tpm/tpm'

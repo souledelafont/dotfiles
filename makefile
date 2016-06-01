@@ -4,8 +4,8 @@ extension := .symlink
 bulletpath := $(dotfilesdir)zsh/oh-my-zsh.symlink/themes/bullet-train.zsh-theme
 
 # find all .symlink files recursively with shell command find
-symrpath := $(patsubst ./%,%,$(shell find . -name '*$(extension)'))
-symapath := $(addprefix $(dotfilesdir),$(symrpath))
+symrpath := $(patsubst ./%,%,$(shell find . -path ./.git -prune -o -name "*.symlink" -print))
+symapath := $(sort $(addprefix $(dotfilesdir),$(symrpath)))
 symhpath := $(sort $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symrpath)))))
 
 help:
@@ -32,7 +32,7 @@ update-submodules:
 
 
 $(symhpath):
-	@echo -n "Linking $@..."
+	@echo "Linking $@..."
 	@$(eval stem=$(patsubst .%,%,$(notdir $(addsuffix $(extension),$@))))
 	@ln -sf $(filter %$(stem),$(symapath)) $@
 	@echo " Done"
