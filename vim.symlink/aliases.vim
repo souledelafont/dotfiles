@@ -38,7 +38,6 @@ nnoremap <leader>etc :e ~/.tmux.conf<cr>
 nnoremap <leader>etz :e ~/.tmux/tmux.zsh<cr>
 nnoremap <leader>efa :e ~/dotfiles/fortran/aliases.zsh<cr>
 nnoremap <leader>egz :e ~/dotfiles/git/git.zsh<cr>
-
 nnoremap <leader>ega :e ~/dotfiles/git/aliases.zsh<cr>
 nnoremap <leader>egcg :e ~/.gitconfig<cr>
 nnoremap <leader>egeg :e ~/.gitexclude<cr>
