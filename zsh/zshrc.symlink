@@ -61,3 +61,5 @@ setxkbmap us -option 'caps:ctrl_modifier'
 
 # must be a better way to do this...
 cd ~
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
