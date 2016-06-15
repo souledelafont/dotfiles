@@ -38,3 +38,4 @@ let g:ctrlp_map = '<leader>p'
 
 " NERDTree settings
 nnoremap <leader>n :NERDTreeTabsToggle<cr>
+let NERDTreeIgnore = ['\.aux$','\.o$','\.pdf$','\.toc$']
