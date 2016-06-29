@@ -22,7 +22,7 @@ link: $(symhpath)
 update: update-submodules pull-project
 
 pull-project:
-	@echo -n "pulling dotfiles...")
+	@echo -n "pulling dotfiles..."
 	@git pull origin master
 
 update-submodules:
@@ -32,7 +32,7 @@ update-submodules:
 
 
 $(symhpath):
-	@echo "Linking $@..."
+	@echo -n "Linking $@..."
 	@$(eval stem=$(patsubst .%,%,$(notdir $(addsuffix $(extension),$@))))
 	@ln -sf $(filter %$(stem),$(symapath)) $@
 	@echo " Done"
