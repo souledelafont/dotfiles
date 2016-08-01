@@ -6,8 +6,9 @@ bind-key C-a send-prefix
 # somes shortcuts
 unbind %
 unbind '"'
-bind-key _ split-window
-bind-key | split-window -h
+bind-key _ split-window	-c "#{pane_current_path}"
+bind-key | split-window -h -c "#{pane_current_path}"
+bind-key c new-window -c "#{pane_current_path}"
 bind-key h select-pane -L
 bind-key j select-pane -D
 bind-key k select-pane -U
@@ -18,7 +19,6 @@ set -g base-index 1
 set -g pane-base-index 1
 # No gap in wondow numbers
 set-option -g renumber-windows on
-# set-option -g status-position top
 
 # Mouse on and off
 bind m\

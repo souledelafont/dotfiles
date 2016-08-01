@@ -1,4 +1,11 @@
-tmux attach -t base || tmux new -s base
+tmux attach -t base 2>/dev/null || tmux new -s base 2>/dev/null
+
+export last_changed=`date -r ~/dotfiles/zsh/zshrc.symlink +'%s'`
+
+# if [ "$last_executed" -gt "$last_changed" ] ;then
+# 	echo "zshrc has already been run since last change"
+# 	exit
+# fi
 
 dotfilesdir=~/dotfiles
 red="\e[0;31m"
@@ -16,9 +23,9 @@ export info=$blue
 # goto function for loading an exterior config
 # 1st arg is name, 2nd is sourcing cmd
 loadconf () {
-	echo -n "Loading $1..."
+	printf "Loading $1..."
 	eval $2
-	echo "$success Done$normal"
+	printf "$success Done$normal\n"
 }
 
 # OH-MY-ZSH
@@ -29,6 +36,7 @@ export BULLETTRAIN_VIRTUALENV_SHOW=false
 export BULLETTRAIN_VIRTUALENV_FG=black
 export BULLETTRAIN_DIR_FG=black
 export BULLETTRAIN_PROMPT_CHAR='↦'
+export BULLETTRAIN_EXEC_TIME_SHOW=true
 BULLETTRAIN_DIR_CONTEXT_SHOW=true
 if [ ! -f $ZSH/themes/bullet-train.zsh-theme ]; then
 	cd $dotfilesdir/zsh/bullet-train-oh-my-zsh-theme
@@ -41,6 +49,7 @@ source $ZSH/oh-my-zsh.sh
 # get *.zsh but not in oh-my-zsh/
 zshexec=( $(find $dotfilesdir -path $dotfilesdir/zsh/oh-my-zsh.symlink -prune -type f -o -name '*.zsh') )
 # source all .zsh files
+
 for zsh in $zshexec; do
 	source $zsh
 done
@@ -59,9 +68,7 @@ export PATH=/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH
 
 # Change capslock to CTRL !
 # need to find a way to do this on any machine (ie mac os)
-setxkbmap us -option 'caps:ctrl_modifier'
-
-# must be a better way to do this...
-cd ~
+setxkbmap us -option 'caps:ctrl_modifier' 2>/dev/null
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export last_executed=`date +'%s'`
