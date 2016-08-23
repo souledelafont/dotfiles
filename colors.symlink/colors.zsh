@@ -9,8 +9,8 @@ fi
 
 # theme=isotope
 # variant=light
-theme=monokai
-variant=dark
+theme=marrakesh
+variant=light
 
 printf 'Setting colorscheme:'$info' base16_'"$theme"'_'"$variant$normal"'...'
 base16_"$theme"_"$variant"
