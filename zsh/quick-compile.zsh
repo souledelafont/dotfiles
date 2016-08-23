@@ -1,12 +1,7 @@
-function fff(){
-	clear && gfortran && ./a.out
+alias cl='clear'
+
+function jff(){
+	gfortran
 }
 
-function cc(){
-	clear && gcc -Wall -Wextra -Werror *.c && ./a.out
-}
-
-function ccc(){
-	clear && gcc -Wall -Wextra -Werror *.c ../*.c
-	./a.out
-}
+alias jcc='gcc -Wall -Wextra -Werror *.c'

@@ -4,6 +4,7 @@ nnoremap j gj
 nnoremap k gk
 inoremap jk <esc>
 nnoremap <leader><space> :nohlsearch<cr>:AirlineRefresh<cr>
+nnoremap <leader>sh :Stdheader<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>z :wq<cr>
@@ -32,9 +33,9 @@ nnoremap <leader>evr :e $MYVIMRC<cr>
 nnoremap <leader>evp :e ~/.vim/plugins.vim<cr>
 nnoremap <leader>eva :e ~/.vim/aliases.vim<cr>
 nnoremap <leader>evf :e ~/.vim/myfiletypes.vim<cr>
-nnoremap <leader>ezr  :e ~/.zshrc<cr>
-nnoremap <leader>eza  :e ~/dotfiles/zsh/aliases.zsh<cr>
-nnoremap <leader>ezc  :e ~/dotfiles/zsh/quick-compile.zsh<cr>
+nnoremap <leader>ezr :e ~/.zshrc<cr>
+nnoremap <leader>eza :e ~/dotfiles/zsh/aliases.zsh<cr>
+nnoremap <leader>ezc :e ~/dotfiles/zsh/quick-compile.zsh<cr>
 nnoremap <leader>etc :e ~/.tmux.conf<cr>
 nnoremap <leader>etz :e ~/.tmux/tmux.zsh<cr>
 nnoremap <leader>efa :e ~/dotfiles/fortran/aliases.zsh<cr>
