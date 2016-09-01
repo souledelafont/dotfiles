@@ -1,3 +1,4 @@
+export EDITOR=vim
 tmux attach -t base 2>/dev/null || tmux new -s base 2>/dev/null
 
 export last_changed=`date -r ~/dotfiles/zsh/zshrc.symlink +'%s'`
@@ -34,10 +35,20 @@ export TERM="xterm-256color"
 export BULLETTRAIN_RUBY_SHOW='false'
 export BULLETTRAIN_VIRTUALENV_SHOW=false
 export BULLETTRAIN_VIRTUALENV_FG=black
-export BULLETTRAIN_DIR_FG=black
-export BULLETTRAIN_PROMPT_CHAR='↦'
+export BULLETTRAIN_PROMPT_CHAR=\$#"🍀 "#↦
 export BULLETTRAIN_EXEC_TIME_SHOW=true
-BULLETTRAIN_DIR_CONTEXT_SHOW=true
+export BULLETTRAIN_TIME_SHOW=false
+export BULLETTRAIN_DIR_FG=black
+export BULLETTRAIN_DIR_EXTENDED=0
+export BULLETTRAIN_DIR_CONTEXT_SHOW=false
+export BULLETTRAIN_CONTEXT_SHOW=true
+export BULLETTRAIN_CONTEXT_DEFAULT_USER=jack jhalford halford
+BULLETTRAIN_PROMPT_ADD_NEWLINE=false
+BULLETTRAIN_PROMPT_ORDER=(
+	git
+	context
+	dir
+)
 if [ ! -f $ZSH/themes/bullet-train.zsh-theme ]; then
 	cd $dotfilesdir/zsh/bullet-train-oh-my-zsh-theme
 	make install
@@ -68,7 +79,8 @@ export PATH=/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH
 
 # Change capslock to CTRL !
 # need to find a way to do this on any machine (ie mac os)
-setxkbmap us -option 'caps:ctrl_modifier' 2>/dev/null
+# THis is for debian
+# setxkbmap us -option 'caps:ctrl_modifier' 2>/dev/null
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # export last_executed=`date +'%s'`

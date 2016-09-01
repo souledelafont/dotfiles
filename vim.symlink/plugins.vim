@@ -10,7 +10,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 
 " Testing
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-scripts/gnuplot-syntax-highlighting'
@@ -20,6 +19,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
+
+" Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on

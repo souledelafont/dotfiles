@@ -17,7 +17,7 @@ bind-key l select-pane -R
 # Start windows and panes at 1, not 0
 set -g base-index 1
 set -g pane-base-index 1
-# No gap in wondow numbers
+# No gap in window numbers
 set-option -g renumber-windows on
 
 # Mouse on and off
@@ -40,6 +40,8 @@ bind M\
 set -g @tpm_plugins '\
 	tmux-plugins/tpm\
 	tmux-plugins/tmux-resurrect\
+	aurelien-rainone/tmux-gitbar\
+	tmuxinator/tmuxinator\
 '
 set -g @resurrect-strategy-vim 'session'
 

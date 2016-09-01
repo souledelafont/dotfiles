@@ -10,3 +10,5 @@ printf $normal
 else
 	echo "No currently running Tmux sessions !"
 fi
+
+export PATH="$HOME/.tmux/plugins/tmuxinator/bin:$PATH"
