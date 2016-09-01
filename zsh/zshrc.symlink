@@ -29,22 +29,31 @@ loadconf () {
 	printf "$success Done$normal\n"
 }
 
+try_command () {
+	hash $1 2>/dev/null\
+	&& eval $2\
+	|| echo "I require "$red$1$nocolor" but it's not installed"
+}
+
+try_command "setxkbmap" "setxkbmap us -option 'caps:ctrl_modifier'"
+
 # OH-MY-ZSH
 # ZSH_THEME="gallois"
 ZSH_THEME="bullet-train"
-export ZSH=$HOME/.oh-my-zsh
-export TERM="xterm-256color"
-export BULLETTRAIN_RUBY_SHOW='false'
-export BULLETTRAIN_VIRTUALENV_SHOW=false
-export BULLETTRAIN_VIRTUALENV_FG=black
-export BULLETTRAIN_PROMPT_CHAR=\$#"🍀 "#↦
-export BULLETTRAIN_EXEC_TIME_SHOW=true
-export BULLETTRAIN_TIME_SHOW=false
-export BULLETTRAIN_DIR_FG=black
-export BULLETTRAIN_DIR_EXTENDED=0
-export BULLETTRAIN_DIR_CONTEXT_SHOW=false
-export BULLETTRAIN_CONTEXT_SHOW=true
-export BULLETTRAIN_CONTEXT_DEFAULT_USER=jack jhalford halford
+ZSH=$HOME/.oh-my-zsh
+TERM="xterm-256color"
+BULLETTRAIN_RUBY_SHOW='false'
+BULLETTRAIN_VIRTUALENV_SHOW=false
+BULLETTRAIN_VIRTUALENV_FG=black
+BULLETTRAIN_IS_SSH_CLIENT=true
+BULLETTRAIN_PROMPT_CHAR=\$#"🍀 "#↦
+BULLETTRAIN_EXEC_TIME_SHOW=true
+BULLETTRAIN_TIME_SHOW=false
+BULLETTRAIN_DIR_FG=black
+BULLETTRAIN_DIR_EXTENDED=0
+BULLETTRAIN_DIR_CONTEXT_SHOW=false
+# BULLETTRAIN_CONTEXT_SHOW=true
+BULLETTRAIN_CONTEXT_DEFAULT_USER=jack
 BULLETTRAIN_PROMPT_ADD_NEWLINE=false
 BULLETTRAIN_PROMPT_ORDER=(
 	git
@@ -81,9 +90,8 @@ export PATH=/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH
 # Change capslock to CTRL !
 # need to find a way to do this on any machine (ie mac os)
 # THis is for debian
-# setxkbmap us -option 'caps:ctrl_modifier' 2>/dev/null
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/bin/"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.bin"
 
 # export last_executed=`date +'%s'`
