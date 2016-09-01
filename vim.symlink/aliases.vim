@@ -7,6 +7,7 @@ nnoremap n nzz
 nnoremap N Nzz
 inoremap jk <esc>
 nnoremap <leader><space> :nohlsearch<cr>:AirlineRefresh<cr>
+nnoremap <leader>sh :Stdheader<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>z :wq<cr>

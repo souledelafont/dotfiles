@@ -6,19 +6,20 @@ call vundle#begin()
 
 " Core
 Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 
 " Testing
-Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'vim-scripts/gnuplot-syntax-highlighting'
+Plugin 'tpope/vim-repeat'
 
 " Colors and themes
 Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'vim-scripts/gnuplot-syntax-highlighting'
 
 " Plugin 'ryanoasis/vim-devicons'
 
