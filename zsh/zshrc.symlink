@@ -1,4 +1,5 @@
 export EDITOR=vim
+
 tmux attach -t base 2>/dev/null || tmux new -s base 2>/dev/null
 
 export last_changed=`date -r ~/dotfiles/zsh/zshrc.symlink +'%s'`
@@ -15,7 +16,6 @@ green="\e[0;32m"
 white="\e[1;37m"
 blue="\e[0;34m"
 nocolor="\e[0m"
-
 export normal=$nocolor
 export success=$green
 export warning=$red
@@ -30,9 +30,11 @@ loadconf () {
 }
 
 try_command () {
-	hash $1 2>/dev/null\
-	&& eval $2\
-	|| echo "I require "$red$1$nocolor" but it's not installed"
+	if hash $1 2>/dev/null; then
+		hash $1 2>/dev/null && eval $2
+	else
+		echo "I require "$red$1$nocolor" but it's not installed"
+	fi
 }
 
 try_command "setxkbmap" "setxkbmap us -option 'caps:ctrl_modifier'"
@@ -45,7 +47,6 @@ TERM="xterm-256color"
 BULLETTRAIN_RUBY_SHOW='false'
 BULLETTRAIN_VIRTUALENV_SHOW=false
 BULLETTRAIN_VIRTUALENV_FG=black
-BULLETTRAIN_IS_SSH_CLIENT=true
 BULLETTRAIN_PROMPT_CHAR=\$#"🍀 "#↦
 BULLETTRAIN_EXEC_TIME_SHOW=true
 BULLETTRAIN_TIME_SHOW=false
