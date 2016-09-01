@@ -87,4 +87,3 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/bin/"
 
 # export last_executed=`date +'%s'`
-source /nfs/2016/j/jhalford/42-correction-jhalford/jhalford-corr-install.sh
