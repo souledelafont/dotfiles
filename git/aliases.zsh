@@ -1,3 +1,2 @@
-alias gs='git status'
+alias gs='git status --short'
 alias gc='git commit'
-alias ga='git add'

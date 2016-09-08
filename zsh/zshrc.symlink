@@ -37,6 +37,14 @@ try_command () {
 	fi
 }
 
+# get *.zsh but not in oh-my-zsh/
+zshexec=( $(find $dotfilesdir -path $dotfilesdir/zsh/oh-my-zsh.symlink -prune -type f -o -name '*.zsh') )
+# source all .zsh files
+
+for zsh in $zshexec; do
+	source $zsh
+done
+
 try_command "setxkbmap" "setxkbmap us -option 'caps:ctrl_modifier'"
 
 # OH-MY-ZSH
@@ -44,10 +52,10 @@ try_command "setxkbmap" "setxkbmap us -option 'caps:ctrl_modifier'"
 ZSH_THEME="bullet-train"
 ZSH=$HOME/.oh-my-zsh
 TERM="xterm-256color"
+chgprompt
 BULLETTRAIN_RUBY_SHOW='false'
 BULLETTRAIN_VIRTUALENV_SHOW=false
 BULLETTRAIN_VIRTUALENV_FG=black
-BULLETTRAIN_PROMPT_CHAR=\$#"🍀 "#↦
 BULLETTRAIN_EXEC_TIME_SHOW=true
 BULLETTRAIN_TIME_SHOW=false
 BULLETTRAIN_DIR_FG=black
@@ -68,13 +76,6 @@ fi
 plugins=(git history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
-# get *.zsh but not in oh-my-zsh/
-zshexec=( $(find $dotfilesdir -path $dotfilesdir/zsh/oh-my-zsh.symlink -prune -type f -o -name '*.zsh') )
-# source all .zsh files
-
-for zsh in $zshexec; do
-	source $zsh
-done
 
 # Python path for pip3
 export PATH=/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH

@@ -34,6 +34,10 @@ bind M\
 	set -g mouse-select-window off\;\
 	display 'Mouse: OFF'
 
+# bind n\
+# 	split-window -h\;\
+# 	send "vim -s ~/.vim/open-notes.vim"
+
 # set-option -g default-terminal "screen-256color"
 
 # List of plugins

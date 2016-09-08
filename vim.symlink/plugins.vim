@@ -6,13 +6,16 @@ call vundle#begin()
 
 " Core
 Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 " Testing
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'tpope/vim-repeat'
+Plugin 'rizzatti/dash.vim'
+Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'Raimondi/delimitMate'
 
 " Colors and themes
 Plugin 'chriskempson/base16-vim'
