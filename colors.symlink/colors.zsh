@@ -7,11 +7,11 @@ if [ -n "$PS1" ]; then #if statement guards adding these helpers for non interac
 	# loadconf "color shortcuts" '"$(~/.colors/base16-shell/profile_helper.sh)"'
 fi
 
-# theme=monokai
+theme=monokai
 # theme=atelierforest
 # theme=isotope
+# theme=solarized
 # variant=light
-theme=solarized
 variant=dark
 
 # variant=light

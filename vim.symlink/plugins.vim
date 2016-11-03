@@ -9,13 +9,20 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'wellle/targets.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'jistr/vim-nerdtree-tabs'
 
 " Testing
 Plugin 'rizzatti/dash.vim'
-Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'vim-scripts/netrw.vim'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-obsession'
 Plugin 'Raimondi/delimitMate'
+
+" Plugin 'maralla/completor.vim'
 
 " Colors and themes
 Plugin 'chriskempson/base16-vim'
@@ -23,8 +30,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-scripts/gnuplot-syntax-highlighting'
-
-" Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
@@ -40,7 +45,5 @@ let g:airline_theme='base16'
 
 " ctrlp settings
 let g:ctrlp_map = '<leader>p'
-
-" NERDTree settings
-nnoremap <leader>n :NERDTreeTabsToggle<cr>
-let NERDTreeIgnore = ['\.aux$','\.o$','\.pdf$','\.toc$']
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
