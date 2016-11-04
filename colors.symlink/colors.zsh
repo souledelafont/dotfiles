@@ -10,8 +10,8 @@ fi
 theme=solarized-dark
 # theme = marrakesh
 
-printf 'Setting colorscheme:'$info' base16_'"$theme"'...\n'$normal
-base16_"$theme"
+printf 'Setting colorscheme:'$info' base16_'$theme'...\n'$normal
+base16_$theme
 printf $success" Done"$normal'\n'
 
 alias colortest="~/dotfiles/colors.symlink/base16-shell/colortest"

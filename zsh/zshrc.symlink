@@ -1,8 +1,5 @@
-# get *.zsh but not in oh-my-zsh/
-
 export EDITOR=vim
 
-tmux attach -t base 2>/dev/null || tmux new -s base 2>/dev/null
 
 # export last_changed=`date -r ~/dotfiles/zsh/zshrc.symlink +'%s'`
 # if [ "$last_executed" -gt "$last_changed" ] ;then
@@ -99,4 +96,7 @@ for zsh in $zshexec; do
 	source $zsh
 done
 
+# randomly change prompt look
 chgprompt
+# to load the tmux bar look vi needs to be opened
+# vi -c :q #except it does an annoying flash everytime...
