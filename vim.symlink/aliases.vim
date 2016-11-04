@@ -1,23 +1,32 @@
 let mapleader = " "
 
+" Workflow
+nnoremap <leader>tn :tabedit<cr>
+nnoremap <leader>e :Ex<cr>
+nnoremap <leader>b :ls<CR>:b
+
 " leader stuff
 nnoremap j gj
 nnoremap k gk
+inoremap jk <esc>
+
+" clear search
+nnoremap <leader><space> :let @/ = ""<cr>:AirlineRefresh<cr>
 nnoremap n nzz
 nnoremap N Nzz
-inoremap jk <esc>
-nnoremap <leader><space> :nohlsearch<cr>:AirlineRefresh<cr>
-nnoremap <leader>sh :Stdheader<cr>
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q!<cr>
+
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>\| :vsp<CR>
+nnoremap <leader>_ :sp<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+
+nnoremap <leader>i :set list!<CR>
+nnoremap <leader>sh :Stdheader<CR>
 nnoremap <leader>d :Dash<space>
-nnoremap <leader>\| :vsp<cr>
-nnoremap <leader>_ :sp<cr>
-nnoremap <leader>h :wincmd h<cr>
-nnoremap <leader>j :wincmd j<cr>
-nnoremap <leader>k :wincmd k<cr>
-nnoremap <leader>l :wincmd l<cr>
-nnoremap <leader>i :set list!<cr>
 
 " Move blocks nicely
 vnoremap J :m '>+1<CR>gv=gv
@@ -26,16 +35,18 @@ vnoremap K :m '<-2<CR>gv=gv
 " Aliases for compiling
 autocmd FileType c nnoremap <leader>cc :!clear && gcc -Wall -Wextra -Werror *.c && ./a.out<cr>
 autocmd FileType fortran nnoremap <leader>cc :!clear && gfortran % && ./a.out<cr>
-nnoremap <leader>cm :!clear && make<cr>
+
+" Aliases for GNU make
+nnoremap <leader>mm :make<CR>
+nnoremap <leader>mt :make test<CR>
 
 " Aliases for tabs
 for i in range(1,9)
 	execute 'nnoremap <leader>'.i.' '.i.'gt'
 endfor
 
-nnoremap <leader>tn :tabedit<space>
 
-" Aliases for opening dotfiles
+" Aliases for notes on dropbox
 nnoremap <leader>en :edit ~/Dropbox/notes/master<cr>
 
 " Aliases for opening dotfiles

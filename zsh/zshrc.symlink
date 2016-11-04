@@ -54,6 +54,7 @@ BULLETTRAIN_RUBY_SHOW='false'
 BULLETTRAIN_VIRTUALENV_SHOW=false
 BULLETTRAIN_VIRTUALENV_FG=black
 BULLETTRAIN_EXEC_TIME_SHOW=true
+BULLETTRAIN_EXEC_TIME_ELAPSED=2
 BULLETTRAIN_TIME_SHOW=false
 BULLETTRAIN_DIR_FG=black
 BULLETTRAIN_DIR_EXTENDED=0
@@ -62,6 +63,7 @@ BULLETTRAIN_DIR_CONTEXT_SHOW=false
 BULLETTRAIN_CONTEXT_DEFAULT_USER=jack
 BULLETTRAIN_PROMPT_ADD_NEWLINE=false
 BULLETTRAIN_PROMPT_ORDER=(
+	cmd_exec_time
 	git
 	context
 	dir
@@ -72,7 +74,6 @@ if [ ! -f $ZSH/themes/bullet-train.zsh-theme ]; then
 fi
 plugins=(git history-substring-search)
 source $ZSH/oh-my-zsh.sh
-
 
 # Python path for pip3
 export PATH=/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH
@@ -90,10 +91,11 @@ export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$HOME/.brew/bin:$PATH"
 
+# get *.zsh but not in oh-my-zsh/
 zshexec=( $(find $dotfilesdir -path $dotfilesdir/zsh/oh-my-zsh.symlink -prune -type f -o -name '*.zsh') )
 # source all .zsh files
+
 for zsh in $zshexec; do
-	echo $zsh
 	source $zsh
 done
 

@@ -13,13 +13,16 @@ syntax on
 autocmd BufEnter * set relativenumber
 set encoding=utf-8
 set number				" adds numbers to left side
-set clipboard=unnamed	" clipboard to anywhere
+" set clipboard=unnamed	" clipboard to anywhere
 set tabstop=4			" number of visual tabs
 set shiftwidth=4		" number of spaces for 1 tab
 set cursorline			" show line of cursor
 set showmatch			" highlights matching brackets
 set hlsearch			" highlight search
+set incsearch			" show first occurence of search while typing
 set listchars=tab:▸\ ,eol:¬
+set backspace=indent,eol,start	" backspace works as expected
+set tags+=.tags			" tagfile
 
 let fortran_free_source=1 " good fortran highlighting on first open
 

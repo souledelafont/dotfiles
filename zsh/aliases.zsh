@@ -1,4 +1,5 @@
-alias l='ls -1p'
 alias la='ls -1Ap'
+alias l='ls -1p'
 alias ed='ed -p"🔥 > "'
 alias norm='norminette `find . -type f -name "*.[c\|h]"`'
+alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
