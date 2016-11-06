@@ -1,9 +1,9 @@
-# remap refix from C-b to C-a
+# remap prefix from C-b to C-a
 set-option -g prefix C-a
 unbind C-b
 bind-key C-a send-prefix
 
-# somes shortcuts
+# binds for pane management
 unbind %
 unbind '"'
 bind-key _ split-window	-c "#{pane_current_path}"
@@ -52,3 +52,7 @@ set -g @resurrect-strategy-vim 'session'
 
 # Initialize TMUX plugin manager
 run '~/.tmux/plugins/tpm/tpm'
+
+# testing some shit
+bind-key Left swap-window -t -1
+bind-key Right swap-window -t +1
