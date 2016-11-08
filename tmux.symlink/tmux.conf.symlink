@@ -3,10 +3,14 @@ set-option -g prefix C-a
 unbind C-b
 bind-key C-a send-prefix
 
+# move windows around
+bind-key Left swap-window -t -1
+bind-key Right swap-window -t +1
+
 # binds for pane management
 unbind %
 unbind '"'
-bind-key _ split-window	-c "#{pane_current_path}"
+bind-key _ split-window	-c "#"
 bind-key | split-window -h -c "#{pane_current_path}"
 bind-key c new-window -c "#{pane_current_path}"
 bind-key h select-pane -L
@@ -14,13 +18,14 @@ bind-key j select-pane -D
 bind-key k select-pane -U
 bind-key l select-pane -R
 
-# Start windows and panes at 1, not 0
+# start windows and panes at 1, not 0
 set -g base-index 1
 set -g pane-base-index 1
-# No gap in window numbers
+
+# no gap in window numbers
 set-option -g renumber-windows on
 
-# Mouse on and off
+# mouse on and off
 bind m\
 	set -g mode-mouse on\;\
 	set -g mouse-resize-pane on\;\
@@ -40,7 +45,7 @@ bind M\
 
 # set-option -g default-terminal "screen-256color"
 
-# List of plugins
+# list of plugins
 set -g @tpm_plugins '\
 	tmux-plugins/tpm\
 	tmux-plugins/tmux-resurrect\
@@ -50,9 +55,10 @@ set -g @tpm_plugins '\
 '
 set -g @resurrect-strategy-vim 'session'
 
-# Initialize TMUX plugin manager
+# initialize TMUX plugin manager
 run '~/.tmux/plugins/tpm/tpm'
 
 # testing some shit
-bind-key Left swap-window -t -1
-bind-key Right swap-window -t +1
+set -g @continuum-restore 'on'
+set -g @continuum-boot 'on'
+set -g @resurrect-strategy-vim 'session'

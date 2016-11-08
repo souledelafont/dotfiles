@@ -45,5 +45,6 @@ let g:airline_theme='base16'
 
 " ctrlp settings
 let g:ctrlp_map = '<leader>p'
+let g:ctrlp_custom_ignore = '\.o$'
 " let g:ycm_key_list_select_completion=[]
 " let g:ycm_key_list_previous_completion=[]

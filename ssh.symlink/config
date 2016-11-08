@@ -1,3 +1,6 @@
 Host zamok
 	HostName zamok.crans.org
 	User halford
+Host github
+	HostName https://github.com/jzck
+	User jzck
