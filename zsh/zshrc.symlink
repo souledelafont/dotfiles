@@ -100,3 +100,4 @@ done
 chgprompt
 # to load the tmux bar look vi needs to be opened
 # vi -c :q #except it does an annoying flash everytime...
+unsetopt share_history
