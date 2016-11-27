@@ -2,7 +2,7 @@ let mapleader = " "
 
 " Workflow
 nnoremap <leader>tn :tabedit<cr>
-nnoremap <leader>e :Ex<cr>
+" nnoremap <leader>e :Ex<cr>
 nnoremap <leader>b :ls<CR>:b
 
 " leader stuff
@@ -67,5 +67,6 @@ nnoremap <leader>egcg :edit ~/.gitconfig<cr>
 nnoremap <leader>egeg :edit ~/.gitexclude<cr>
 nnoremap <leader>egcl :edit .git/config<cr>
 nnoremap <leader>egel :edit .git/info/exclude<cr>
+nnoremap <leader>egi :edit .gitignore<cr>
 nnoremap <leader>ecz :edit ~/.colors/colors.zsh<cr>
 nnoremap <leader>efz :edit ~/.fonts/fonts.zsh<cr>

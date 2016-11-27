@@ -1,8 +1,8 @@
 " Reload vimrc at every save
-augroup reload_vimrc " {
-	autocmd!
-	autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
+" augroup reload_vimrc " {
+" 	autocmd!
+" 	autocmd BufWritePost $MYVIMRC,~/.vim/plugins.vim source $MYVIMRC
+" augroup END " }
 
 " Syntax
 let myfiletypefile = "~/.vim/myfiletypes.vim"
@@ -10,6 +10,7 @@ filetype on
 syntax on
 
 " Options
+set noswapfile
 autocmd BufEnter * set relativenumber
 set encoding=utf-8
 set number				" adds numbers to left side
@@ -37,3 +38,6 @@ if filereadable(expand("~/.vimrc_background"))
 	let base16colorspace=256
 	source ~/.vimrc_background
 endif
+
+" 42 syntax highlighting
+syntax match cType "\<[tseu]_\w\+\>"

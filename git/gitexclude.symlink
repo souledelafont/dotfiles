@@ -1,5 +1,6 @@
 *.swp
 *.swo
-a.out
 .DS_store
+a.out
 obj
+Session.vim

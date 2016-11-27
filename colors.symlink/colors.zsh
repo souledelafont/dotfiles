@@ -2,16 +2,14 @@
 
 if [ -n "$PS1" ]; then #if statement guards adding these helpers for non interactive shells
 	printf "Loading color shortcuts..."
-	eval "$(~/.colors/base16-shell/profile_helper.sh)"
+	source ~/.colors/base16-shell/profile_helper.sh >/dev/null
 	printf $success" Done"$normal'\n'
 	# loadconf "color shortcuts" '"$(~/.colors/base16-shell/profile_helper.sh)"'
 fi
 
-theme=solarized-dark
-# theme = marrakesh
-
-printf 'Setting colorscheme:'$info' base16_'$theme'...\n'$normal
-base16_$theme
+printf 'Setting colorscheme:'$info' base16_'$theme'...'$normal
+# base16_google-dark
+source ~/.base16_theme
 printf $success" Done"$normal'\n'
 
 alias colortest="~/dotfiles/colors.symlink/base16-shell/colortest"

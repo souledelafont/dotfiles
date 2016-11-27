@@ -1,4 +1,5 @@
 export EDITOR=vim
+export MAIL=jack@crans.org
 
 
 # export last_changed=`date -r ~/dotfiles/zsh/zshrc.symlink +'%s'`
