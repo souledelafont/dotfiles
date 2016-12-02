@@ -1,4 +1,4 @@
-# Dotfiles
+![logo](https://cdn.rawgit.com/jzck/dotfiles/master/dotfiles-logo.png)
 
 These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux, as well as fonts and color schemes.
 **features** : topical organization, auto-sourcing zsh files
