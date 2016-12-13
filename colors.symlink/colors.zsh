@@ -2,7 +2,7 @@
 
 if [ -n "$PS1" ]; then #if statement guards adding these helpers for non interactive shells
 	printf "Loading color shortcuts..."
-	source ~/.colors/base16-shell/profile_helper.sh >/dev/null
+	eval "$(~/.colors/base16-shell/profile_helper.sh)"
 	printf $success" Done"$normal'\n'
 	# loadconf "color shortcuts" '"$(~/.colors/base16-shell/profile_helper.sh)"'
 fi
