@@ -21,6 +21,7 @@ Plugin 'vim-scripts/netrw.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-obsession'
 Plugin 'Raimondi/delimitMate'
+" Plugin 'xuhdev/vim-latex-live-preview'
 
 " Plugin 'maralla/completor.vim'
 

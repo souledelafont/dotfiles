@@ -4,3 +4,6 @@
 a.out
 obj
 Session.vim
+*.aux
+*.log
+*.out
