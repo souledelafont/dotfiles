@@ -1,6 +1,6 @@
 export EDITOR=vim
 export MAIL=jack@crans.org
-
+# export MAIL=`id -un`@student.42.fr
 
 # export last_changed=`date -r ~/dotfiles/zsh/zshrc.symlink +'%s'`
 # if [ "$last_executed" -gt "$last_changed" ] ;then
