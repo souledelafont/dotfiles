@@ -35,6 +35,7 @@ vnoremap K :m '<-2<CR>gv=gv
 " Aliases for compiling
 autocmd FileType c nnoremap <leader>cc :!clear && gcc -Wall -Wextra -Werror *.c && ./a.out<cr>
 autocmd FileType fortran nnoremap <leader>cc :!clear && gfortran % && ./a.out<cr>
+autocmd FileType tex nnoremap <leader>cc :!pdflatex %<cr>
 
 " Aliases for GNU make
 nnoremap <leader>mm :make<CR>

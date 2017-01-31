@@ -30,7 +30,6 @@ update-submodules:
 	@git submodule update --init
 	@echo " Done"
 
-
 $(symhpath):
 	@echo -n "Linking $@..."
 	@$(eval stem=$(patsubst .%,%,$(notdir $(addsuffix $(extension),$@))))
