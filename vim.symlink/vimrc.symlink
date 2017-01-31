@@ -40,4 +40,4 @@ if filereadable(expand("~/.vimrc_background"))
 endif
 
 " 42 syntax highlighting
-syntax match cType "\<[tseu]_\w\+\>"
+autocmd BufEnter * syntax match cType "\<[teu]_\w\+\>"

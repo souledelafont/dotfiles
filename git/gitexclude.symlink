@@ -3,4 +3,5 @@
 .DS_store
 a.out
 obj
+objs
 Session.vim
