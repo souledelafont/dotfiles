@@ -1,38 +1,44 @@
 export EDITOR=vim
 export MAIL=jack@crans.org
-# export MAIL=`id -un`@student.42.fr
-
-# export last_changed=`date -r ~/dotfiles/zsh/zshrc.symlink +'%s'`
-# if [ "$last_executed" -gt "$last_changed" ] ;then
-# 	echo "zshrc has already been run since last change"
-# 	exit
-# fi
+# export MAIL=$(id -un)@student.42.fr
 
 dotfilesdir=~/dotfiles
-red="\e[0;31m"
-black="\e[0;30m"
-green="\e[0;32m"
-white="\e[1;37m"
-blue="\e[0;34m"
-nocolor="\e[0m"
-export normal=$nocolor
-export success=$green
-export warning=$red
-export info=$blue
+FG_DEFAULT="\e[0m"
+FG_BLACK="\e[0;30m"
+FG_RED="\e[0;31m"
+FG_GREEN="\e[32m"
+FG_BLUE="\e[0;34m"
+color_default=$FG_DEFAULT
+color_success=$FG_GREEN
+color_warning=$FG_RED
+color_info=$FG_BLUE
 
 # wrapper function for loading an exterior config
 # 1st arg is name, 2nd is sourcing cmd
 loadconf () {
-	printf "Loading $1..."
+	printf "\e[2K\rLoading $1..."
 	eval $2
-	printf "$success Done$normal\n"
+	printf "$color_success Done$color_default"
+}
+
+echomiddle () {
+	DELTA=$(echo "($(tput cols)-${#1})/2" | bc)
+	printf "\r\e[2K%*s" $DELTA " "
+	printf $1
+}
+
+endconf () {
+	# clear
+	echomiddle "----------------------------------------------\n"
+	echomiddle "----- finished configuring your shell 👌  -----\n"
+	echomiddle "----------------------------------------------\n"
 }
 
 try_command () {
 	if hash $1 2>/dev/null; then
 		hash $1 2>/dev/null && eval $2
 	else
-		echo "I require "$red$1$nocolor" but it's not installed"
+		echo "I require "$FG_RED$1$FG_DEFAULT" but it's not installed"
 	fi
 }
 
@@ -74,7 +80,7 @@ plugins=(git history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # Python path for pip3
-export PATH=/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH
+# export PATH=/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH
 # Virtualenv
 # bug: reloading zsh kills deactivate command
 # must read wrapper doc...
@@ -90,7 +96,7 @@ export PATH="$PATH:$HOME/.bin"
 export PATH="$HOME/.brew/bin:$PATH"
 
 # get *.zsh but not in oh-my-zsh/
-zshexec=( $(find $dotfilesdir -path $dotfilesdir/zsh/oh-my-zsh.symlink -prune -type f -o -name '*.zsh') )
+zshexec=( $(find $dotfilesdir -name '*.zsh' -maxdepth 2) )
 # source all .zsh files
 
 for zsh in $zshexec; do
@@ -99,6 +105,10 @@ done
 
 # randomly change prompt look
 chgprompt
+
 # to load the tmux bar look vi needs to be opened
 # vi -c :q #except it does an annoying flash everytime...
-unsetopt share_history
+
+unsetopt share_history # histories are attached to zsh instances
+
+endconf
