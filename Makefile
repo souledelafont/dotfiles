@@ -24,25 +24,21 @@ help:
 link: $(symhpath)
 
 $(symhpath):
-	@#printf "index="$(INDEX)
 	@$(eval stem=$(patsubst .%,%,$(notdir $(addsuffix $(extension),$@))))
 	@$(eval source=$(filter %$(stem),$(symapath)))
+	@# Start of linkage message
 	@$(if $(filter 0,$(INDEX)),printf "\e[4mGoing to link your config files now:\e[24m\n")
 	@# different printf for even/odd INDEX
-	$(if $(filter 0,$(shell echo "$(INDEX)%2" | bc)),\
+	$(if $(filter 0,$(shell expr $(INDEX) % 2)),\
 		@printf "\e[38;5;239m",\
 		@printf "\e[38;5;246m")
 	@# different printf for INDEX=0
 	$(if $(filter 0,$(INDEX)),\
-		@printf "$@\t ➔  $(filter %$(stem),$(symapath))\n",\
+		@printf "$@\t ➔  $(shell echo $(source))\n",\
 		@printf "%*s%s\t ➔  %*s%s\n" \
-		12 " " $(notdir $@) \
-		11 " " $(notdir $(source)))
-	@# different printf for even/odd INDEX
-	$(if $(filter 0,$(shell echo "$(INDEX)%2" | bc)),\
-		@printf "\e[39m",\
-		@printf "\e[39m")
-	@ln -sf $(filter %$(stem),$(symapath)) $@
+		$(shell expr $(shell echo $(dir $@) | wc -c) - 1) " " $(notdir $@) \
+		$(shell expr $(shell echo $(dotfilesdir) | wc -c) - 1) " " $(notdir $(source)))
+	@ln -sf $(source) $@
 	@$(eval INDEX=$(shell expr $(INDEX) + 1))
 
 backup:
