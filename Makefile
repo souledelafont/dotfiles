@@ -7,7 +7,7 @@ symrpath	:= $(patsubst ./%,%,$(shell find . -path ./.git -prune -o -name "*$(ext
 symapath	:= $(sort $(addprefix $(dotfilesdir),$(symrpath)))
 symhpath	:= $(sort $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symrpath)))))
 
-INDEX		= 0
+INDEX		= 1
 
 help:
 	@printf "\e[94m\e[7m"
@@ -24,20 +24,23 @@ help:
 link: $(symhpath)
 
 $(symhpath):
-	@$(eval stem=$(patsubst .%,%,$(notdir $(addsuffix $(extension),$@))))
-	@$(eval source=$(filter %$(stem),$(symapath)))
+	@#$(eval stem=$(patsubst .%,%,$(notdir $(addsuffix $(extension),$@))))
+	@#$(eval source=$(filter %$(stem),$(symapath)))
+	@$(eval source=$(word $(INDEX),$(symapath)))
 	@# Start of linkage message
-	@$(if $(filter 0,$(INDEX)),printf "\e[4mGoing to link your config files now:\e[24m\n")
+	@$(if $(filter 1,$(INDEX)),printf "\e[4mGoing to link your config files now:\e[24m\n")
 	@# different printf for even/odd INDEX
-	$(if $(filter 0,$(shell expr $(INDEX) % 2)),\
+	$(if $(filter 1,$(shell expr $(INDEX) % 2)),\
 		@printf "\e[38;5;239m",\
 		@printf "\e[38;5;246m")
 	@# different printf for INDEX=0
-	$(if $(filter 0,$(INDEX)),\
+	@#$(patsubst $(shell echo $(dotfilesdir))%,%,$(source)))
+	$(if $(filter 1,$(INDEX)),\
 		@printf "$@\t ➔  $(shell echo $(source))\n",\
 		@printf "%*s%s\t ➔  %*s%s\n" \
 		$(shell expr $(shell echo $(dir $@) | wc -c) - 1) " " $(notdir $@) \
-		$(shell expr $(shell echo $(dotfilesdir) | wc -c) - 1) " " $(notdir $(source)))
+		$(shell expr $(shell echo $(dotfilesdir) | wc -c) - 1) " "\
+		$(word $(INDEX),$(symrpath)))
 	@ln -sf $(source) $@
 	@$(eval INDEX=$(shell expr $(INDEX) + 1))
 
