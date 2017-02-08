@@ -22,13 +22,12 @@ loadconf () {
 }
 
 echomiddle () {
-	DELTA=$(echo "($(tput cols)-${#1})/2" | bc)
+	DELTA=$(echo "($(tput cols)/2-${#1})" | bc)
 	printf "\r\e[2K%*s" $DELTA " "
 	printf $1
 }
 
 endconf () {
-	# clear
 	echomiddle "----------------------------------------------\n"
 	echomiddle "----- finished configuring your shell 👌  -----\n"
 	echomiddle "----------------------------------------------\n"
