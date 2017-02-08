@@ -4,20 +4,19 @@ extension	:= .symlink
 
 # find all .symlink files recursively with shell command find
 symrpath	:= $(patsubst ./%,%,$(shell find . -path ./.git -prune -o -name "*$(extension)" -print))
-symapath	:= $(sort $(addprefix $(dotfilesdir),$(symrpath)))
-symhpath	:= $(sort $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symrpath)))))
-
+symapath	:= $(addprefix $(dotfilesdir),$(symrpath))
+symhpath	:= $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symrpath))))
 INDEX		= 1
 
 help:
 	@printf "\e[94m\e[7m"
-	@echo "              -----------------------------                    "
-	@echo "             💡  DOTFILES MAKEFILE USAGE 💡                      "
-	@echo "              -----------------------------                    "
-	@echo " make backup : move previous corresping dotfiles to ~/.backup. "
-	@echo " make link   : symlink from *.symlink to dotfiles.             "
-	@echo " make re     : backup and link.                                "
-	@printf "\e[27m"
+	@printf "              ===========================                      \n"
+	@printf "              | DOTFILES MAKEFILE USAGE |                      \n"
+	@printf "              ===========================                      \n"
+	@printf " make backup : move previous corresping dotfiles to ~/.backup. \n"
+	@printf " make link   : symlink from *.symlink to dotfiles.             \n"
+	@printf " make re     : backup and link.                                \n"
+	@printf "\e[27m\n"
 
 .PHONY: link update backup help
 
