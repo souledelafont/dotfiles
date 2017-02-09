@@ -16,15 +16,7 @@ color_success=$FG_GREEN
 color_warning=$FG_RED
 color_info=$FG_BLUE
 
-source zsh/config_functions.sh
-
-try_command () {
-	if hash $1 2>/dev/null; then
-		hash $1 2>/dev/null && eval $2
-	else
-		echo "I require "$FG_RED$1$FG_DEFAULT" but it's not installed"
-	fi
-}
+source $dotfilesdir/zsh/config_functions.sh
 
 ###############################
 # OS dependant stuff          #
@@ -50,6 +42,5 @@ for zsh in $zshexec; do
 	source $zsh
 done
 
-unsetopt share_history # histories are attached to zsh instances
 chgprompt
 endconf

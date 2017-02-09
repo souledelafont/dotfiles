@@ -3,8 +3,7 @@
 ###############################
 
 if [ ! -f $ZSH/themes/bullet-train.zsh-theme ]; then
-	cd $dotfilesdir/zsh/bullet-train-oh-my-zsh-theme
-	make install
+	make -C $dotfilesdir/zsh/bullet-train-oh-my-zsh-theme install
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -22,6 +21,7 @@ BULLETTRAIN_DIR_CONTEXT_SHOW=false
 # BULLETTRAIN_CONTEXT_SHOW=true
 BULLETTRAIN_CONTEXT_DEFAULT_USER=jack
 BULLETTRAIN_PROMPT_ADD_NEWLINE=false
+
 plugins=(git history-substring-search)
 BULLETTRAIN_PROMPT_ORDER=(
 	cmd_exec_time
@@ -29,3 +29,5 @@ BULLETTRAIN_PROMPT_ORDER=(
 	context
 	dir
 )
+
+unsetopt share_history # histories are attached to zsh instances
