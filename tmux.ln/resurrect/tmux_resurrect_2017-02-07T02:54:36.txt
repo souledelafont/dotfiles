@@ -1,0 +1,12 @@
+pane	dotfiles	1	:zsh	1	:*	1	:/Users/jack/sedtris	1	zsh	:
+pane	resume	1	:vim	0	:-	1	:/Users/jack/resume	1	vim	:vim Makefile
+pane	resume	2	:zsh	1	:*	1	:/Users/jack/resume	1	zsh	:
+pane	shell	1	:VIM	0	:-	1	:/Users/jack/42/minishell	1	vim	:vim -S
+pane	shell	2	:man	1	:*	1	:/Users/jack/42/minishell	1	zsh	:
+pane	shell	2	:man	1	:*	2	:/Users/jack/42/minishell	0	tail	:tail -f debug
+window	dotfiles	1	1	:*	5e51,178x43,0,0,50
+window	resume	1	0	:-	5b64,88x43,0,0,53
+window	resume	2	1	:*	5b65,88x43,0,0,54
+window	shell	1	0	:-	bc43,178x43,0,0,6
+window	shell	2	1	:*	3eb1,178x43,0,0{89x43,0,0,60,88x43,90,0,61}
+state	shell	dotfiles

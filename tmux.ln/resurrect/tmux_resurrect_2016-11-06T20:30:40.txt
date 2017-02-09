@@ -1,0 +1,17 @@
+pane	ls	1	:vim	1	:*	1	:/Users/jack/42/ft_ls	1	vim	:vim Makefile
+pane	ls	2	:vim	0	:-	1	:/Users/jack/42/ft_ls/libft/src/ft_printf	1	vim	:vim ft_parse.c
+pane	ls	2	:vim	0	:-	2	:/Users/jack/42/ft_ls/libft	0	zsh	:
+pane	ls	3	:zsh	0	:	1	:/Users/jack/dotfiles/git	1	zsh	:
+pane	ls	4	:CHECK	0	:	1	:/Users/jack/42/42FileChecker	1	bash	:/bin/bash /Users/jack/42/42FileChecker/42FileChecker.sh
+pane	minishell	1	:zsh	0	:	1	:/Users/jack/42/minishell	1	vim	:vi
+pane	minishell	2	:vim	0	:-	1	:/Users/jack/42/minishell/libft	1	vim	:vim src/dlst/ft_dlst_last.c
+pane	minishell	2	:vim	0	:-	2	:/Users/jack/42/minishell/libft	0	zsh	:
+pane	minishell	3	:vim	1	:*	1	:/Users/jack/42/minishell	1	vim	:vim -S Session.vim
+window	ls	1	1	:*	5a12,158x41,0,0,13
+window	ls	2	0	:-	1373,158x41,0,0{79x41,0,0,19,78x41,80,0,21}
+window	ls	3	0	:	da14,158x41,0,0,25
+window	ls	4	0	:	5a11,158x41,0,0,31
+window	minishell	1	0	:	b3be,158x41,0,0,1
+window	minishell	2	0	:-	5414,158x41,0,0{80x41,0,0,3,77x41,81,0,4}
+window	minishell	3	1	:*	b3bd,158x41,0,0,0
+state	ls	minishell

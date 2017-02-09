@@ -4,9 +4,9 @@
 # exclude patterns (uncomment them if you want to use them):
 # *.[oa]
 # *~
-vim.symlink/bundle/*
-!vim.symlink/bundle/Vundle.vim
-tmux.symlink/plugins/*
-tmux.symlink/resurrect
-!tmux.symlink/plugins/tpm
-ssh.symlink/known_hosts
+vim.ln/bundle/*
+!vim.ln/bundle/Vundle.vim
+tmux.ln/plugins/*
+tmux.ln/resurrect
+!tmux.ln/plugins/tpm
+ssh.ln/known_hosts

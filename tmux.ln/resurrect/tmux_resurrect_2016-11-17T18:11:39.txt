@@ -1,0 +1,14 @@
+pane	base	1	:zsh	1	:*	1	:/Users/jack/42/libft	1	zsh	:
+pane	base	2	:zsh	0	:-	1	:/Users/jack/dotfiles	1	zsh	:
+pane	ft_ls	1	:vim	0	:-	1	:/Users/jack/42/ft_ls	1	vim	:vim -S Session.vim
+pane	ft_ls	2	:zsh	1	:*	1	:/Users/jack/42/ft_ls/libft	1	zsh	:
+pane	minishell	1	:zsh	1	:*	1	:/Users/jack/42/minishell	1	vim	:vim
+pane	minishell	2	:zsh	0	:-	1	:/Users/jack/42/minishell	1	zsh	:
+pane	minishell	2	:zsh	0	:-	2	:/Users/jack/42/minishell/libft	0	zsh	:
+window	base	1	1	:*	bc3d,178x43,0,0,0
+window	base	2	0	:-	bc3e,178x43,0,0,1
+window	ft_ls	1	0	:-	de53,178x43,0,0,24
+window	ft_ls	2	1	:*	de55,178x43,0,0,26
+window	minishell	1	1	:*	bc3f,178x43,0,0,2
+window	minishell	2	0	:-	3ec0,178x43,0,0{89x43,0,0,19,88x43,90,0,27}
+state	minishell	ft_ls

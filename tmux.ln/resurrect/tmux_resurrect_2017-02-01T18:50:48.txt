@@ -1,0 +1,16 @@
+pane	base	1	:zsh	1	:*	1	:/Users/jack/dotfiles	1	zsh	:
+pane	base	2	:zsh	0	:-	1	:/Users/jack/dotfiles	1	zsh	:
+pane	ft_ls	1	:zsh	1	:*	1	:/Users/jack	1	vim	:vim -S Session.vim
+pane	ft_ls	2	:zsh	0	:-	1	:/Users/jack/42/ft_ls	1	zsh	:
+pane	shell	1	:mon vim	0	:-	1	:/Users/jack/42/minishell	1	vim	:vim -S Session.vim
+pane	shell	2	:zsh	1	:*	1	:/Users/jack/42/minishell	1	zsh	:
+pane	shell	2	:zsh	1	:*	2	:/Users/jack/42/minishell	0	tail	:tail -f debug
+pane	shell	3	:man	0	:	1	:/Users/jack/42/minishell	1	zsh	:
+window	base	1	1	:*	5e55,178x43,0,0,16
+window	base	2	0	:-	de50,178x43,0,0,21
+window	ft_ls	1	1	:*	b261,80x24,0,0,4
+window	ft_ls	2	0	:-	b262,80x24,0,0,5
+window	shell	1	0	:-	bc43,178x43,0,0,6
+window	shell	2	1	:*	7cc9,178x43,0,0{89x43,0,0,27,88x43,90,0,8}
+window	shell	3	0	:	bc46,178x43,0,0,9
+state	shell	base

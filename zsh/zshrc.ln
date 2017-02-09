@@ -1,0 +1,55 @@
+export EDITOR=vim
+export MAIL=jack@crans.org
+# export MAIL=$(id -un)@student.42.fr
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.bin"
+export PATH="$HOME/.brew/bin:$PATH"
+
+dotfilesdir=~/dotfiles
+FG_DEFAULT="\e[0m"
+FG_BLACK="\e[0;30m"
+FG_RED="\e[0;31m"
+FG_GREEN="\e[32m"
+FG_BLUE="\e[0;34m"
+color_default=$FG_DEFAULT
+color_success=$FG_GREEN
+color_warning=$FG_RED
+color_info=$FG_BLUE
+
+source zsh/config_functions.sh
+
+try_command () {
+	if hash $1 2>/dev/null; then
+		hash $1 2>/dev/null && eval $2
+	else
+		echo "I require "$FG_RED$1$FG_DEFAULT" but it's not installed"
+	fi
+}
+
+###############################
+# OS dependant stuff          #
+###############################
+
+if [[ `uname` == 'Darwin' ]]; then
+	#MacOS
+else
+	#Linux
+	try_command "setxkbmap" "setxkbmap us -option 'caps:ctrl_modifier'"
+fi
+
+
+###############################
+# themed configs 		      #
+###############################
+
+# get *.zsh but not in oh-my-zsh/
+zshexec=( $(find $dotfilesdir -name '*.zsh' -maxdepth 2) )
+
+# source all .zsh files
+for zsh in $zshexec; do
+	source $zsh
+done
+
+unsetopt share_history # histories are attached to zsh instances
+chgprompt
+endconf

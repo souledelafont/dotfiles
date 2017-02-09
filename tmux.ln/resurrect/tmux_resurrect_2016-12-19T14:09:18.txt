@@ -1,0 +1,17 @@
+pane	base	1	:zsh	1	:*	1	:/Users/jack/dotfiles	1	zsh	:
+pane	ft_ls	1	:zsh	1	:*	1	:/Users/jack/42/ft_ls	1	zsh	:
+pane	ft_ls	2	:zsh	0	:-	1	:/Users/jack/42/ft_ls	1	zsh	:
+pane	shell	1	:zsh	1	:*	1	:/Users/jack/42/minishell	1	vim	:vim src/main/main.c
+pane	shell	2	:zsh	0	:-	1	:/Users/jack/42/minishell	1	minishell	:vim
+cat -e
+cat -e
+./minishell
+pane	shell	2	:zsh	0	:-	2	:/Users/jack/42/minishell	0	tail	:tail -f out
+pane	shell	3	:man	0	:	1	:/Users/jack/42/minishell	1	zsh	:
+window	base	1	1	:*	5e55,178x43,0,0,16
+window	ft_ls	1	1	:*	bc41,178x43,0,0,4
+window	ft_ls	2	0	:-	bc42,178x43,0,0,5
+window	shell	1	1	:*	bc43,178x43,0,0,6
+window	shell	2	0	:-	7cbb,178x43,0,0{89x43,0,0,14,88x43,90,0,8}
+window	shell	3	0	:	bc46,178x43,0,0,9
+state	shell	base

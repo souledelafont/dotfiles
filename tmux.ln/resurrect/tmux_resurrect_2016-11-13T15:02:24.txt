@@ -1,0 +1,10 @@
+pane	base	1	:zsh	1	:*	1	:/Users/jack/42/minishell	1	zsh	:
+pane	base	2	:zsh	0	:-	1	:/Users/jack/dotfiles	1	zsh	:
+pane	minishell	1	:zsh	0	:-	1	:/Users/jack/42/minishell	1	vim	:vim
+pane	minishell	2	:cat	1	:*	1	:/Users/jack/42/minishell	1	cat	:cat
+pane	minishell	2	:cat	1	:*	2	:/Users/jack/42/minishell	0	zsh	:(zsh)
+window	base	1	1	:*	bc3d,178x43,0,0,0
+window	base	2	0	:-	bc3e,178x43,0,0,1
+window	minishell	1	0	:-	bc3f,178x43,0,0,2
+window	minishell	2	1	:*	7ebc,178x43,0,0{89x43,0,0,17,88x43,90,0,18}
+state	minishell	base

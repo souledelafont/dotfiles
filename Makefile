@@ -1,9 +1,9 @@
 dotfilesdir	:= ~/dotfiles/
 symdir		:= ~/
-extension	:= .symlink
+extension	:= .ln
 
 # find all .symlink files recursively with shell command find
-symrpath	:= $(patsubst ./%,%,$(shell find . -path ./.git -prune -o -name "*$(extension)" -print))
+symrpath	:= $(patsubst ./%,%,$(shell find . -path ./.git -prune -o -name "*$(extension)" -print | sort -r))
 symapath	:= $(addprefix $(dotfilesdir),$(symrpath))
 symhpath	:= $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symrpath))))
 INDEX		= 1
@@ -28,12 +28,11 @@ $(symhpath):
 	@$(eval source=$(word $(INDEX),$(symapath)))
 	@# Start of linkage message
 	@$(if $(filter 1,$(INDEX)),printf "\e[4mGoing to link your config files now:\e[24m\n")
-	@# different printf for even/odd INDEX
+	@# Different printf for even/odd INDEX
 	$(if $(filter 1,$(shell expr $(INDEX) % 2)),\
 		@printf "\e[38;5;239m",\
 		@printf "\e[38;5;246m")
-	@# different printf for INDEX=0
-	@#$(patsubst $(shell echo $(dotfilesdir))%,%,$(source)))
+	@# Different printf for INDEX=0
 	$(if $(filter 1,$(INDEX)),\
 		@printf "$@\t ➔  $(shell echo $(source))\n",\
 		@printf "%*s%s\t ➔  %*s%s\n" \
@@ -41,6 +40,7 @@ $(symhpath):
 		$(shell expr $(shell echo $(dotfilesdir) | wc -c) - 1) " "\
 		$(word $(INDEX),$(symrpath)))
 	@ln -sf $(source) $@
+	@# Increment INDEX
 	@$(eval INDEX=$(shell expr $(INDEX) + 1))
 
 backup:
