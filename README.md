@@ -1,7 +1,7 @@
 ![logo](https://cdn.rawgit.com/jzck/dotfiles/master/dotfiles-logo.png)
 
-These are my personal dotfiles, configuration for a few programs: zsh, vim, tmux, as well as fonts and color schemes.
-**features** : topical organization, auto-sourcing zsh files
+These are my personal dotfiles, configuration for a few programs: `zsh`, `vim`, `tmux`, `git`, as well as fonts and colors.  
+**cool features** : topical organization, auto-sourcing zsh files, automatic rc file linking to `$HOME`
 
 ## topical
 
@@ -14,7 +14,7 @@ symlinked without extension into `$HOME` when you run `make link`.
 typical organizations goes as:
 
   - topic/xxx.zsh
-  - topic/xxx.symlink
+  - topic/xxx.ln
 
 ## install
 
@@ -25,9 +25,9 @@ git submodule update --init
 make re
 ```
 
-## Components
+## components
 
-All the exterior components are implemented as "git submodules".
+All the exterior components are implemented as `git submodules`.
 
 | Component | What is it ? |
 |--------|-----|
