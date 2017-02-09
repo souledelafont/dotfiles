@@ -11,11 +11,6 @@ files in there. Anything with an extension of `.zsh` will get automatically
 sourced. Anything with an extension of `.ln` will get
 symlinked without extension into `$HOME` when you run `make link`.
 
-typical organizations goes as:
-
-  - topic/xxx.zsh
-  - topic/xxx.ln
-
 ## install
 
 ```
