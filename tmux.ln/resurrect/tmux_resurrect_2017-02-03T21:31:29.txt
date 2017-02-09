@@ -1,8 +1,0 @@
-pane	6	1	:base	1	:*	1	:/Users/jack	1	zsh	:
-pane	shell	1	:VIM	0	:-	1	:/Users/jack/42/minishell	1	vim	:vim -S Session.vim
-pane	shell	2	:man	1	:*	1	:/Users/jack/42/minishell	1	zsh	:-zsh
-pane	shell	2	:man	1	:*	2	:/Users/jack/42/minishell	0	tail	:tail -f debug
-window	6	1	1	:*	5e51,178x43,0,0,31
-window	shell	1	0	:-	bc43,178x43,0,0,6
-window	shell	2	1	:*	028d,178x43,0,0{89x43,0,0,9,88x43,90,0,29}
-state	shell	6

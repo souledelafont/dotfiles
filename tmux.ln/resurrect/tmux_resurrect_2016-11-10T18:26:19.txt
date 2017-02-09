@@ -1,7 +1,0 @@
-pane	base	1	:zsh	1	:*	1	:/Users/jack/42/minishell	1	zsh	:
-pane	base	2	:zsh	0	:-	1	:/Users/jack/dotfiles	1	zsh	:
-pane	minishell	1	:zsh	1	:*	1	:/Users/jack	1	zsh	:
-window	base	1	1	:*	bc3d,178x43,0,0,0
-window	base	2	0	:-	bc3e,178x43,0,0,1
-window	minishell	1	1	:*	bc3f,178x43,0,0,2
-state	minishell	base
