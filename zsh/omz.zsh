@@ -2,12 +2,12 @@
 # install bullet-train        #
 ###############################
 
+ZSH=$HOME/.oh-my-zsh
+
 if [ ! -f $ZSH/themes/bullet-train.zsh-theme ]; then
 	make -C $dotfilesdir/zsh/bullet-train-oh-my-zsh-theme install
 fi
 
-source $ZSH/oh-my-zsh.sh
-ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="bullet-train"
 BULLETTRAIN_RUBY_SHOW='false'
 BULLETTRAIN_VIRTUALENV_SHOW=false
@@ -31,3 +31,5 @@ BULLETTRAIN_PROMPT_ORDER=(
 )
 
 unsetopt share_history # histories are attached to zsh instances
+
+source $ZSH/oh-my-zsh.sh
