@@ -17,7 +17,7 @@ try_command () {
 	if hash $1 2>/dev/null; then
 		hash $1 2>/dev/null && eval $2
 	else
-		echo "I require "$FG_RED$1$FG_DEFAULT" but it's not installed"
+		echo "\rI require "$FG_RED$1$FG_DEFAULT" but it's not installed"
 	fi
 }
 
