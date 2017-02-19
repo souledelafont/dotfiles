@@ -42,5 +42,7 @@ for zsh in $zshexec; do
 	source $zsh
 done
 
+source $dotfilesdir/zsh/aliases.zsh
+
 chgprompt
 endconf
