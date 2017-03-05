@@ -1,3 +1,6 @@
+export PATH="/usr/local/bin":$PATH
+export PATH="/usr/local/share/python":$PATH
+
 # Python path for pip3
 # export PATH=/Library/Frameworks/Python.framework/Versions/3.3/bin:$PATH
 # Virtualenv
@@ -9,4 +12,3 @@
 # if [ -z "$VIRTUAL_ENV" ]; then
 # 	loadconf "virtualenv wrapper" "source `which virtualenvwrapper.sh`"
 # fi
-
