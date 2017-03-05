@@ -5,4 +5,4 @@ if [ -n "$PS1" ]; then #if statement guards adding these helpers for non interac
 	loadconf "colorscheme" "source ~/.base16_theme"
 fi
 
-alias colortest="~/dotfiles/colors.ln/base16-shell/colortest"
+alias colortest="~/.colors/base16-shell/colortest"

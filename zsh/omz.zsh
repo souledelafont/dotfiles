@@ -15,7 +15,7 @@ BULLETTRAIN_VIRTUALENV_FG=black
 BULLETTRAIN_EXEC_TIME_SHOW=true
 BULLETTRAIN_EXEC_TIME_ELAPSED=2
 BULLETTRAIN_TIME_SHOW=false
-BULLETTRAIN_DIR_FG='white'
+BULLETTRAIN_DIR_FG='black'
 BULLETTRAIN_DIR_BG='green'
 BULLETTRAIN_DIR_EXTENDED=0
 BULLETTRAIN_DIR_CONTEXT_SHOW=false
@@ -33,6 +33,6 @@ BULLETTRAIN_PROMPT_ORDER=(
 	dir
 )
 
-unsetopt share_history # histories are attached to zsh instances
-
 source $ZSH/oh-my-zsh.sh
+
+unsetopt share_history # histories are attached to zsh instances
