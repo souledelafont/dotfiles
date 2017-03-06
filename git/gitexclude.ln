@@ -8,3 +8,4 @@ Session.vim
 *.aux
 *.log
 *.out
+__pycache__
