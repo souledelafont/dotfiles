@@ -42,6 +42,7 @@ set laststatus=2
 set noshowmode
 let g:bufferline_echo = 0
 let g:airline_theme='base16'
+" let g:airline#extensions#whitespace#trailing_regexp = '\s$'
 " let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', ''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
 " let g:airline#extensions#tabline#enabled = 1
 

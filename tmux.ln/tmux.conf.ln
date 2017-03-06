@@ -58,7 +58,14 @@ set -g @tpm_plugins '\
 # initialize TMUX plugin manager
 run '~/.tmux/plugins/tpm/tpm'
 
+# set -g status-right '#[fg=red]Continuum: #{continuum_status} #[bg=black]#[fg=green] %d %b %Y%l:%M %p'
+
 # testing some shit
-set -g @continuum-restore 'on'
-set -g @continuum-boot 'on'
 set -g @resurrect-strategy-vim 'session'
+set -g @resurrect-capture-pane-contents 'on'
+run-shell ~/.tmux/plugins/tmux-resurrect/resurrect.tmux
+set -g @continuum-save-interval '15'
+set -g @continuum-boot 'on'
+set -g @continuum-restore 'on'
+set -g @continuum-boot-options 'iterm'
+run-shell ~/.tmux/plugins/tmux-continuum/continuum.tmux
