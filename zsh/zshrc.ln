@@ -46,3 +46,6 @@ source $dotfilesdir/zsh/aliases.zsh
 
 chgprompt
 endconf
+
+# Load Homebrew config script
+source $HOME/.brewconfig.zsh

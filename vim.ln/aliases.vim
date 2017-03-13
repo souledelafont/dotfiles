@@ -46,7 +46,6 @@ for i in range(1,9)
 	execute 'nnoremap <leader>'.i.' '.i.'gt'
 endfor
 
-
 " Aliases for notes on dropbox
 nnoremap <leader>en :edit ~/Dropbox/notes/master<cr>
 
