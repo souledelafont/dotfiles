@@ -8,7 +8,7 @@ nnoremap <leader>b :ls<CR>:b
 " leader stuff
 nnoremap j gj
 nnoremap k gk
-inoremap jk <esc>
+inoremap jk <esc>l
 
 " clear search
 nnoremap <leader><space> :let @/ = ""<cr>:AirlineRefresh<cr>

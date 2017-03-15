@@ -42,4 +42,4 @@ set t_Co=256 " this line fixes color problems for vim inside tmux
 
 " 42 syntax highlighting
 autocmd BufEnter * syntax match cType "\<[t]_\w\+\>"
-autocmd BufEnter * syntax match cType "\<\w\+\_[t]>"
+autocmd BufEnter * syntax match cType "\<\w\+_[t]\>"
