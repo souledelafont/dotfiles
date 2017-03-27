@@ -5,13 +5,18 @@ nnoremap <leader>tn :tabedit<cr>
 " nnoremap <leader>e :Ex<cr>
 nnoremap <leader>b :ls<CR>:b
 
-" leader stuff
+" movement stuff
 nnoremap j gj
 nnoremap k gk
+nnoremap B ^
+nnoremap E $
+nnoremap ^ <nop>
+nnoremap $ <nop>
 inoremap jk <esc>l
 
 " clear search
 nnoremap <leader><space> :let @/ = ""<cr>:AirlineRefresh<cr>
+nnoremap u uzz
 nnoremap n nzz
 nnoremap N Nzz
 

@@ -21,9 +21,11 @@ set cursorline			" show line of cursor
 set showmatch			" highlights matching brackets
 set hlsearch			" highlight search
 set incsearch			" show first occurence of search while typing
+set wildmenu			" integrated complete menu
 set listchars=tab:▸\ ,eol:¬
 set backspace=indent,eol,start	" backspace works as expected
 set tags+=.tags			" tagfile
+set lazyredraw			" redraw only when we need to
 
 let fortran_free_source=1 " good fortran highlighting on first open
 
@@ -38,6 +40,7 @@ if filereadable(expand("~/.vimrc_background"))
 	let base16colorspace=256
 	source ~/.vimrc_background
 endif
+
 set t_Co=256 " this line fixes color problems for vim inside tmux
 
 " 42 syntax highlighting
