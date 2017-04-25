@@ -24,18 +24,19 @@ source $dotfilesdir/zsh/config_functions.sh
 
 if [[ `uname` == 'Darwin' ]]; then
 	#MacOS
+	# Load Homebrew config script
+	source $HOME/.brewconfig.zsh
 else
 	#Linux
 	try_command "setxkbmap" "setxkbmap us -option 'caps:ctrl_modifier'"
 fi
-
 
 ###############################
 # themed configs 		      #
 ###############################
 
 # get *.zsh but not in oh-my-zsh/
-zshexec=( $(find $dotfilesdir -name '*.zsh' -maxdepth 2) )
+zshexec=( $(find $dotfilesdir -maxdepth 2 -name '*.zsh') )
 
 # source all .zsh files
 for zsh in $zshexec; do
@@ -44,8 +45,4 @@ done
 
 source $dotfilesdir/zsh/aliases.zsh
 
-chgprompt
 endconf
-
-# Load Homebrew config script
-source $HOME/.brewconfig.zsh

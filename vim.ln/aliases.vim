@@ -61,6 +61,7 @@ nnoremap <leader>evp :edit ~/.vim/plugins.vim<cr>
 nnoremap <leader>eva :edit ~/.vim/aliases.vim<cr>
 nnoremap <leader>evf :edit ~/.vim/myfiletypes.vim<cr>
 nnoremap <leader>ezr :edit ~/.zshrc<cr>
+nnoremap <leader>eomz :edit ~/dotfiles/zsh/omz.zsh<cr>
 nnoremap <leader>eza :edit ~/dotfiles/zsh/aliases.zsh<cr>
 nnoremap <leader>ezc :edit ~/dotfiles/zsh/quick-compile.zsh<cr>
 nnoremap <leader>etc :edit ~/.tmux.conf<cr>
