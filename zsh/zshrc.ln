@@ -28,6 +28,8 @@ if [[ `uname` == 'Darwin' ]]; then
 	#Homebrew config
 	source $HOME/.brewconfig.zsh
 	export PATH="$HOME/.brew/bin:$PATH"
+	# Load Homebrew config script
+	source $HOME/.brewconfig.zsh
 else
 	#Linux
 	#capslock -> ctrl
@@ -48,5 +50,4 @@ done
 
 source $dotfilesdir/zsh/aliases.zsh
 
-chgprompt
 endconf
