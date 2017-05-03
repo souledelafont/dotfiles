@@ -1,9 +1,10 @@
 export EDITOR=vim
+# export MAIL=$(id -un)@student.42.fr #42 automatic email
 export MAIL=jack@crans.org
-# export MAIL=$(id -un)@student.42.fr
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:$HOME/.bin"
-export PATH="$HOME/.brew/bin:$PATH"
+# personal bin
+export PATH="$PATH:$HOME/bin:$HOME/.bin"
+# cross-gn bin
+export PATH="$PATH:/opt/cross/bin"
 
 dotfilesdir=~/dotfiles
 FG_DEFAULT="\e[0m"
@@ -19,15 +20,19 @@ color_info=$FG_BLUE
 source $dotfilesdir/zsh/config_functions.sh
 
 ###############################
-# OS dependant stuff          #
+# OS dependant config         #
 ###############################
 
 if [[ `uname` == 'Darwin' ]]; then
 	#MacOS
+	#Homebrew config
+	source $HOME/.brewconfig.zsh
+	export PATH="$HOME/.brew/bin:$PATH"
 	# Load Homebrew config script
 	source $HOME/.brewconfig.zsh
 else
 	#Linux
+	#capslock -> ctrl
 	try_command "setxkbmap" "setxkbmap us -option 'caps:ctrl_modifier'"
 fi
 

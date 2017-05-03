@@ -17,12 +17,13 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-obsession'
 Plugin 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
 " Plugin 'xuhdev/vim-latex-live-preview'
 
 " Colors and themes
 Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin	 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-scripts/gnuplot-syntax-highlighting'
 "
