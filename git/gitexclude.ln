@@ -9,3 +9,4 @@ Session.vim
 *.log
 *.out
 __pycache__
+STDBUG

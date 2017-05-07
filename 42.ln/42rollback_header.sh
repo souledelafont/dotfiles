@@ -1,9 +1,5 @@
 #!/bin/sh
-verbose=0
-if [ "$1" = "-v" ]
-then
-	verbose=1
-fi
+
 word=$(git status -s | sed 's/.* //')
 red="\033[38;5;1m"
 gre="\033[38;5;2m"
@@ -58,76 +54,47 @@ do_checkout ()
 	i_tmp=$(echo $i | sed 's/\//_/g')
 	cp $i "$HOME/Documents/.$i_tmp.back"
 	git checkout $i
-	if [ $verbose -eq 1 ]
-	then
-		echo "$gre D - O - N - E $res"
-		echo "$cya $i was checked out. A copy still exist in $HOME/Documents/.$i_tmp.back$res\n"
-	fi
+	# echo "$gre D - O - N - E $res"
+	# echo "$cya $i was checked out. A copy still exist in $HOME/Documents/.$i_tmp.back$res\n"
 }
 
-if [ $verbose -eq 1 ]
-then
-	for i in $word
-	do
-		if [ -e $i ]
+for i in $word
+do
+	if [ -e $i ]
+	then
+		if [ -f $i ]
 		then
-			if [ -f $i ]
+			diff=$(git diff -U0 --exit-code --color $i)
+			if [ "$?" -eq 1 ]
 			then
-				diff=$(git diff -U0 --exit-code --color $i)
-				if [ "$?" -eq 1 ]
+				nb_lines=$(echo "$diff" | wc -l)
+				if [ "$nb_lines" -eq 7 ]
 				then
-					nb_lines=$(echo "$diff" | wc -l)
-					if [ "$nb_lines" -eq 7 ]
+					match=$(array_in_array "-9 +9 Updated: by ### ########.fr" "$diff")
+					if [ $match -eq 1 ]
 					then
-						match=$(array_in_array "-9 +9 Updated: by ### ########.fr" "$diff")
-						if [ $match -eq 1 ]
-						then
-							echo "\n$cya CHANGES on $i :$res"
-							echo "$diff"
-							confirm
-							if [ $? -eq 0 ]
-							then
-								do_checkout
-							else
-								echo "$cya Nothing done for $i$res\n"
-							fi
-						else
-							echo "$gre$i is not concerned (diff on the good lines)$res"
-						fi
-					else
-						echo "$gre$i is not concerned (diff is too big)$res"
-					fi
-				else
-					echo "$gre$i is not concerned (diff is null)$res"
-				fi
-			else
-				echo "$red$i is not a regular file$res"
-			fi
-		else
-			echo "$red$i doesn't exist$res"
-		fi
-	done
-else
-	for i in $word
-	do
-		if [ -e $i ]
-		then
-			if [ -f $i ]
-			then
-				diff=$(git diff -U0 --exit-code --color $i)
-				if [ "$?" -eq 1 ]
-				then
-					nb_lines=$(echo "$diff" | wc -l)
-					if [ "$nb_lines" -eq 7 ]
-					then
-						match=$(array_in_array "-9 +9 Updated: by ### ########.fr" "$diff")
-						if [ $match -eq 1 ]
-						then
+						# echo "\n$cya CHANGES on $i :$res"
+						# echo "$diff"
+						# confirm
+						# if [ $? -eq 0 ]
+						# then
 							do_checkout
-						fi
+						# else
+						# 	echo "$cya Nothing done for $i$res\n"
+						# fi
+					# else
+					# 	echo "$gre$i is not concerned (diff on the good lines)$res"
 					fi
+				# else
+				# 	echo "$gre$i is not concerned (diff is too big)$res"
 				fi
+			# else
+			# 	echo "$gre$i is not concerned (diff is null)$res"
 			fi
+		# else
+		# 	echo "$red$i is not a regular file$res"
 		fi
-	done
-fi
+	else
+		echo "$red$i doesn't exist$res"
+	fi
+done

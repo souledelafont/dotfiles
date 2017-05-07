@@ -3,7 +3,7 @@
 loadconf () {
 	printf "\e[2K\rLoading $1..."
 	eval $2
-	printf "$color_success Done$color_default"
+	printf "$color_success Done$color_default\n"
 }
 
 # text printed right aligned with center of screen

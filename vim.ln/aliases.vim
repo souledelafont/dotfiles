@@ -5,13 +5,18 @@ nnoremap <leader>tn :tabedit<cr>
 " nnoremap <leader>e :Ex<cr>
 nnoremap <leader>b :ls<CR>:b
 
-" leader stuff
+" movement stuff
 nnoremap j gj
 nnoremap k gk
+nnoremap B ^
+nnoremap E $
+nnoremap ^ <nop>
+nnoremap $ <nop>
 inoremap jk <esc>l
 
 " clear search
 nnoremap <leader><space> :let @/ = ""<cr>:AirlineRefresh<cr>
+nnoremap u uzz
 nnoremap n nzz
 nnoremap N Nzz
 
@@ -56,6 +61,7 @@ nnoremap <leader>evp :edit ~/.vim/plugins.vim<cr>
 nnoremap <leader>eva :edit ~/.vim/aliases.vim<cr>
 nnoremap <leader>evf :edit ~/.vim/myfiletypes.vim<cr>
 nnoremap <leader>ezr :edit ~/.zshrc<cr>
+nnoremap <leader>eomz :edit ~/dotfiles/zsh/omz.zsh<cr>
 nnoremap <leader>eza :edit ~/dotfiles/zsh/aliases.zsh<cr>
 nnoremap <leader>ezc :edit ~/dotfiles/zsh/quick-compile.zsh<cr>
 nnoremap <leader>etc :edit ~/.tmux.conf<cr>

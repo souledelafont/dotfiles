@@ -21,9 +21,11 @@ set cursorline			" show line of cursor
 set showmatch			" highlights matching brackets
 set hlsearch			" highlight search
 set incsearch			" show first occurence of search while typing
+set wildmenu			" integrated complete menu
 set listchars=tab:▸\ ,eol:¬
 set backspace=indent,eol,start	" backspace works as expected
 set tags+=.tags			" tagfile
+set lazyredraw			" redraw only when we need to
 
 let fortran_free_source=1 " good fortran highlighting on first open
 
@@ -38,8 +40,45 @@ if filereadable(expand("~/.vimrc_background"))
 	let base16colorspace=256
 	source ~/.vimrc_background
 endif
+
 set t_Co=256 " this line fixes color problems for vim inside tmux
 
 " 42 syntax highlighting
 autocmd BufEnter * syntax match cType "\<[t]_\w\+\>"
 autocmd BufEnter * syntax match cType "\<\w\+_[t]\>"
+
+" paste Function
+if &term =~ "xterm.*"
+        let &t_ti .= "\e[?6h\e[?69h"
+        let &t_te .= "\e7\e[?69l\e[?6l\e8"
+        let &t_CV = "\e[%i%p1%d;%p2%ds"
+        let &t_CS = "y"
+        let &t_ti .= "\e[?2004h"
+        let &t_te .= "\e[?2004l"
+        function! XTermPasteBegin(ret)
+                set pastetoggle=<Esc>[201~
+                set paste
+                return a:ret
+        endfunction
+        map <expr> <Esc>[200~ XTermPasteBegin("i")
+        imap <expr> <Esc>[200~ XTermPasteBegin("")
+        cmap <Esc>[200~ <nop>
+        cmap <Esc>[201~ <nop>
+else
+        function! WrapForTmux(s)
+                if !exists('$TMUX')
+                        return a:s
+                endif
+                let tmux_start = "\<Esc>Ptmux;"
+                let tmux_end = "\<Esc>\\"
+                return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+        endfunction
+        let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+        let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+        function! XTermPasteBegin()
+                set pastetoggle=<Esc>[201~
+                set paste
+                return ""
+        endfunction
+        inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+endif

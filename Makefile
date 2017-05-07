@@ -10,6 +10,7 @@ INDEX		= 1
 
 help:
 	@printf "\e[94m\e[7m"
+	@printf "       SCRIPT IS BROKEN! PLEASE 'make re' EVERYTIME            \n"
 	@printf "              ===========================                      \n"
 	@printf "              | DOTFILES MAKEFILE USAGE |                      \n"
 	@printf "              ===========================                      \n"
@@ -26,12 +27,15 @@ $(symhpath):
 	@#$(eval stem=$(patsubst .%,%,$(notdir $(addsuffix $(extension),$@))))
 	@#$(eval source=$(filter %$(stem),$(symapath)))
 	@$(eval source=$(word $(INDEX),$(symapath)))
+
 	@# Start of linkage message
-	@$(if $(filter 1,$(INDEX)),printf "\e[4mGoing to link your config files now:\e[24m\n")
+	@$(if $(filter 1,$(INDEX)),printf "\e[4mlinking config files:\e[24m\n")
+
 	@# Different printf for even/odd INDEX
 	$(if $(filter 1,$(shell expr $(INDEX) % 2)),\
 		@printf "\e[38;5;239m",\
 		@printf "\e[38;5;246m")
+
 	@# Different printf for INDEX=0
 	$(if $(filter 1,$(INDEX)),\
 		@printf "$@\t ➔  $(shell echo $(source))\n",\
