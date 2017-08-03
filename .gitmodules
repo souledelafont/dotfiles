@@ -16,3 +16,6 @@
 [submodule "zsh/oh-my-zsh.ln"]
 	path = zsh/oh-my-zsh.ln
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "zsh/zprezto.ln"]
+	path = zsh/zprezto.ln
+	url = https://github.com/sorin-ionescu/prezto.git

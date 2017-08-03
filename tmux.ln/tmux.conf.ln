@@ -82,14 +82,12 @@ run-shell ~/.tmux/plugins/tmux-continuum/continuum.tmux
 set-option -g default-terminal "screen-256color"
 set-option -ga terminal-overrides ",xterm-256color:Tc"
 
-# set -g window-style 'fg=white,bg=colour236'
-# set -g window-style 'fg=colour245,bg=colour245'
-# set -g window-style 'fg=colour247,bg=colour236'
-# set -g window-style ''
-# set -g window-active-style 'fg=white,bg=black'
-
-# set -g pane-border-fg black
-# set -g pane-active-border-fg brightred
-# set -g pane-border-fg magenta
-# set -g pane-active-border-fg green
-# set -g pane-active-border-bg default
+# set inactive/active window styles
+set -g window-style 'fg=colour247,bg=colour236'
+set -g window-active-style 'fg=colour250,bg=black'
+ 
+#pane border
+set -g pane-border-bg colour235
+set -g pane-border-fg colour238
+set -g pane-active-border-bg colour236
+set -g pane-active-border-fg colour154

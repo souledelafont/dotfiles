@@ -8,5 +8,8 @@ Session.vim
 *.aux
 *.log
 *.out
+.venv
+venv
+*.pyc
 __pycache__
 STDBUG

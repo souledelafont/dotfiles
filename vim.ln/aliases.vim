@@ -8,10 +8,6 @@ nnoremap <leader>b :ls<CR>:b
 " movement stuff
 nnoremap j gj
 nnoremap k gk
-nnoremap B ^
-nnoremap E $
-nnoremap ^ <nop>
-nnoremap $ <nop>
 inoremap jk <esc>l
 
 " clear search
@@ -39,6 +35,7 @@ vnoremap K :m '<-2<CR>gv=gv
 
 " Aliases for compiling
 autocmd FileType c nnoremap <leader>cc :!clear && gcc -Wall -Wextra -Werror *.c && ./a.out<cr>
+autocmd FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 autocmd FileType fortran nnoremap <leader>cc :!clear && gfortran % && ./a.out<cr>
 autocmd FileType tex nnoremap <leader>cc :!pdflatex %<cr>
 
@@ -52,7 +49,7 @@ for i in range(1,9)
 endfor
 
 " Aliases for notes on dropbox
-nnoremap <leader>en :edit ~/Dropbox/notes/master<cr>
+" nnoremap <leader>en :edit ~/Dropbox/notes/master<cr>
 
 " Aliases for opening dotfiles
 nnoremap <leader>emf :edit ~/dotfiles/makefile<cr>
@@ -61,7 +58,7 @@ nnoremap <leader>evp :edit ~/.vim/plugins.vim<cr>
 nnoremap <leader>eva :edit ~/.vim/aliases.vim<cr>
 nnoremap <leader>evf :edit ~/.vim/myfiletypes.vim<cr>
 nnoremap <leader>ezr :edit ~/.zshrc<cr>
-nnoremap <leader>eomz :edit ~/dotfiles/zsh/omz.zsh<cr>
+nnoremap <leader>ezpr :edit ~/dotfiles/zsh/zpreztorc.ln<cr>
 nnoremap <leader>eza :edit ~/dotfiles/zsh/aliases.zsh<cr>
 nnoremap <leader>ezc :edit ~/dotfiles/zsh/quick-compile.zsh<cr>
 nnoremap <leader>etc :edit ~/.tmux.conf<cr>

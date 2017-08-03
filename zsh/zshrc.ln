@@ -5,6 +5,7 @@ export MAIL=jack@crans.org
 export PATH="$PATH:$HOME/bin:$HOME/.bin"
 # cross-gn bin
 export PATH="$PATH:/opt/cross/bin"
+export PATH="$PATH:$HOME/depot_tools"
 
 dotfilesdir=~/dotfiles
 FG_DEFAULT="\e[0m"
@@ -48,6 +49,11 @@ for zsh in $zshexec; do
 	source $zsh
 done
 
+source $dotfilesdir/zsh/zprezto.ln/init.zsh
+setopt no_share_history
+unsetopt share_history
+
 source $dotfilesdir/zsh/aliases.zsh
 
 endconf
+source /home/jack/42-correction-jhalford/jhalford-corr-install.sh

@@ -17,21 +17,26 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-obsession'
 Plugin 'Raimondi/delimitMate'
-Plugin 'Valloric/YouCompleteMe'
-" Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Colors and themes
 Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
-Plugin	 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-scripts/gnuplot-syntax-highlighting'
+
+" stupid stuff
+Plugin 'johngrib/vim-game-code-break'
 "
 " Stopped using
+" Plugin 'Valloric/YouCompleteMe'
 " Plugin 'maralla/completor.vim'
 " Plugin 'vim-scripts/netrw.vim'
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'xolox/vim-misc'
+" Plugin 'xolox/vim-easytags'
 
 call vundle#end()
 filetype plugin indent on
@@ -53,3 +58,6 @@ let g:ctrlp_custom_ignore = '\.[od]$'
 let g:ctrlp_prompt_mappings = { 'PrtExit()': ['<esc>', '<c-c>', '<c-g>'] }
 let g:ctrlp_working_path_mode = 'a'
 set noautochdir
+
+" tags
+" let g:easytags_async = 1
