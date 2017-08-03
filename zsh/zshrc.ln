@@ -50,10 +50,21 @@ for zsh in $zshexec; do
 done
 
 source $dotfilesdir/zsh/zprezto.ln/init.zsh
+
+#cleanup what prezto init fucked up
+prompt_agnoster_main() {
+  RETVAL=$?
+  CURRENT_BG='NONE'
+  prompt_status
+  # prompt_context
+  prompt_virtualenv
+  prompt_dir
+  prompt_git
+  prompt_end
+}
 setopt no_share_history
 unsetopt share_history
 
 source $dotfilesdir/zsh/aliases.zsh
 
 endconf
-source /home/jack/42-correction-jhalford/jhalford-corr-install.sh
