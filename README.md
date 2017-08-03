@@ -27,7 +27,7 @@ All the exterior components are implemented as `git submodules`.
 | Component | What is it ? |
 |--------|-----|
 | [base16-shell](https://github.com/JohnMorales/base16-shell.git) | Awesome colors |
-| [powerline fonts](https://github.com/powerline/fonts.git ~/do) | Awesome fonts |
+| [powerline fonts](https://github.com/powerline/fonts.git) | Awesome fonts |
 | [bullet train](https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git) | ZSH theme |
 | [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh.git) | ZSH framework |
 | [vundle](https://github.com/VundleVim/Vundle.vim.git) | Vim plugin manager |
