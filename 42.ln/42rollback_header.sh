@@ -37,7 +37,6 @@ array_in_array ()
 
 confirm ()
 {
-	# call with a prompt string or use a default
 	echo "$cya${1:-Are you sure? [y/N]}$res"
 	read -r -p " " response
 	case "$response" in
