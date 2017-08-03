@@ -7,10 +7,12 @@ symrpath	:= $(patsubst ./%,%,$(shell find . -path ./.git -prune -o -name "*$(ext
 symapath	:= $(addprefix $(dotfilesdir),$(symrpath))
 symhpath	:= $(addprefix $(symdir).,$(notdir $(subst $(extension),,$(symrpath))))
 INDEX		= 1
+SHELL		:= bash
 
 help:
-	@printf "\e[94m\e[7m"
+	@printf "\e[31m\e[7m"
 	@printf "       SCRIPT IS BROKEN! PLEASE 'make re' EVERYTIME            \n"
+	@printf "\e[94m\e[7m"
 	@printf "              ===========================                      \n"
 	@printf "              | DOTFILES MAKEFILE USAGE |                      \n"
 	@printf "              ===========================                      \n"
@@ -29,19 +31,18 @@ $(symhpath):
 	@$(eval source=$(word $(INDEX),$(symapath)))
 
 	@# Start of linkage message
-	@$(if $(filter 1,$(INDEX)),printf "\e[4mlinking config files:\e[24m\n")
+	@# $(if $(filter 1,$(INDEX)),printf "\e[4mlinking config files:\e[24m\n")
 
 	@# Different printf for even/odd INDEX
 	$(if $(filter 1,$(shell expr $(INDEX) % 2)),\
-		@printf "\e[38;5;239m",\
+		@printf "\e[38;5;242m",\
 		@printf "\e[38;5;246m")
 
 	@# Different printf for INDEX=0
 	$(if $(filter 1,$(INDEX)),\
 		@printf "$@\t ➔  $(shell echo $(source))\n",\
-		@printf "%*s%s\t ➔  %*s%s\n" \
+		@printf "%*s%s\t ➔  %s\n" \
 		$(shell expr $(shell echo $(dir $@) | wc -c) - 1) " " $(notdir $@) \
-		$(shell expr $(shell echo $(dotfilesdir) | wc -c) - 1) " "\
 		$(word $(INDEX),$(symrpath)))
 	@ln -sf $(source) $@
 	@# Increment INDEX

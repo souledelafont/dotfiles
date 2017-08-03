@@ -1,3 +1,0 @@
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rbenv/bin"
-try_command "rbenv" 'eval "$(rbenv init -)"'

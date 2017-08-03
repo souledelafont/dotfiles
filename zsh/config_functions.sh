@@ -22,6 +22,7 @@ try_command () {
 }
 
 endconf () {
+	return
 	right_align_center "----------------------------------------------\n"
 	right_align_center "----- finished configuring your shell 👌  -----\n"
 	right_align_center "----------------------------------------------\n"
