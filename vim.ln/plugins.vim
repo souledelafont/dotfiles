@@ -60,4 +60,4 @@ let g:ctrlp_working_path_mode = 'a'
 set noautochdir
 
 " tags
-" let g:easytags_async = 1
+let g:gutentags_ctags_tagfile = ".tags"
