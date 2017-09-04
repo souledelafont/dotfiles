@@ -1,0 +1,4 @@
+#config for building AOSP from source
+export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
+export PATH="$HOME/Android/Sdk/platform-tools":$PATH
+export AOSP_WORK_DIR=$HOME"/ANDROID_SOURCE"
