@@ -8,11 +8,11 @@ export PATH="$PATH:/opt/cross/bin"
 export PATH="$PATH:$HOME/depot_tools"
 
 dotfilesdir=~/dotfiles
-FG_DEFAULT="\e[0m"
-FG_BLACK="\e[0;30m"
-FG_RED="\e[0;31m"
-FG_GREEN="\e[32m"
-FG_BLUE="\e[0;34m"
+FG_DEFAULT="\x1b[0m"
+FG_BLACK="\x1b[0;30m"
+FG_RED="\x1b[0;31m"
+FG_GREEN="\x1b[32m"
+FG_BLUE="\x1b[0;34m"
 color_default=$FG_DEFAULT
 color_success=$FG_GREEN
 color_warning=$FG_RED
