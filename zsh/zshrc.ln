@@ -29,12 +29,11 @@ if [[ `uname` == 'Darwin' ]]; then
 	#Homebrew config
 	source $HOME/.brewconfig.zsh
 	export PATH="$HOME/.brew/bin:$PATH"
-	# Load Homebrew config script
-	source $HOME/.brewconfig.zsh
 else
 	#Linux
 	#capslock -> ctrl
-	try_command "setxkbmap" "setxkbmap us -option 'caps:ctrl_modifier'"
+	try_command "setxkbmap" "setxkbmap -option 'caps:ctrl_modifier'"
+	alias open='xdg-open'
 fi
 
 ###############################
@@ -53,15 +52,18 @@ source $dotfilesdir/zsh/zprezto.ln/init.zsh
 
 #cleanup what prezto init fucked up
 prompt_agnoster_main() {
-  RETVAL=$?
-  CURRENT_BG='NONE'
-  prompt_status
-  # prompt_context
-  prompt_virtualenv
-  prompt_dir
-  prompt_git
-  prompt_end
+	RETVAL=$?
+	CURRENT_BG='NONE'
+	prompt_status
+	# prompt_context
+	prompt_virtualenv
+	prompt_dir
+	prompt_git
+	prompt_end
 }
+# unalias rm 2>&-
+zstyle ':prezto:module:utility' safe-ops no
+setopt nocorrect
 setopt no_share_history
 unsetopt share_history
 

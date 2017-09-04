@@ -14,7 +14,7 @@ git config --global alias.s "status --short"
 git config --global alias.f "fetch"
 git config --global alias.rh "reset --hard"
 git config --global alias.l "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-git config --global alias.rand !"sh -c \"git commit -am '$(curl -s http://whatthecommit.com/index.txt)'\""
+git config --global alias.rand !"sh -c \"git commit -m '\$(curl -s http://whatthecommit.com/index.txt)'\""
 
 # filters
 # git config --global filter.42header.cleatn " checkout"
