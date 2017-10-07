@@ -1,6 +1,3 @@
-[submodule "zsh/bullet-train-oh-my-zsh-theme"]
-	path = zsh/bullet-train-oh-my-zsh-theme
-	url = https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git
 [submodule "tmux.ln/plugins/tpm"]
 	path = tmux.ln/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
@@ -13,9 +10,6 @@
 [submodule "vim.ln/bundle/Vundle.vim"]
 	path = vim.ln/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
-[submodule "zsh/oh-my-zsh.ln"]
-	path = zsh/oh-my-zsh.ln
-	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "zsh/zprezto.ln"]
 	path = zsh/zprezto.ln
 	url = https://github.com/sorin-ionescu/prezto.git
