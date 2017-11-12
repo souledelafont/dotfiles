@@ -1,63 +1,57 @@
 " Plugin
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " Core
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'wellle/targets.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'wellle/targets.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-obsession'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-eunuch'
+Plug 'w0rp/ale'
 
 " Testing
-Plugin 'rizzatti/dash.vim'
-Plugin 'tpope/vim-vinegar'
-Plugin 'tpope/vim-obsession'
-Plugin 'Raimondi/delimitMate'
-Plugin 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 
 " Colors and themes
-Plugin 'chriskempson/base16-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'vim-scripts/gnuplot-syntax-highlighting'
+Plug 'sheerun/vim-polyglot'
+Plug 'itchyny/lightline.vim'
+Plug 'chriskempson/base16-vim'
 
-" stupid stuff
-Plugin 'johngrib/vim-game-code-break'
-"
 " Stopped using
-" Plugin 'Valloric/YouCompleteMe'
+" Plug 'edkolev/tmuxline.vim'
+" Plug 'tpope/vim-vinegar'
+" Plug 'rizzatti/dash.vim'
+" Plug 'junegunn/goyo.vim' " prose mode
+" Plugin 'Valloric/YouCompleteMe' " replaced with syntastic (async vim8.0)
 " Plugin 'maralla/completor.vim'
 " Plugin 'vim-scripts/netrw.vim'
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'jistr/vim-nerdtree-tabs'
 " Plugin 'xolox/vim-misc'
 " Plugin 'xolox/vim-easytags'
+" Plugin 'scrooloose/nerdtree' " replaced with ctrl p
+" Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'ctrlpvim/ctrlp.vim' " replaced with fzf
+" Plug 'vim-airline/vim-airline' " replaced with lightline
+" Plug 'vim-airline/vim-airline-themes'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
-" Plugin settings
-" vim-airline settings
-let g:airline_powerline_fonts = 1
-set laststatus=2
-set noshowmode
-let g:bufferline_echo = 0
-let g:airline_theme='base16'
-" let g:airline#extensions#whitespace#trailing_regexp = '\s$'
-" let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''$'', ''')}', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
-" let g:airline#extensions#tabline#enabled = 1
+" FZF settings
+nmap ; :Buffers<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>t :Tags<CR>
 
-" ctrlp settings
-let g:ctrlp_map = '<leader>p'
-let g:ctrlp_custom_ignore = '\.[od]$'
-let g:ctrlp_prompt_mappings = { 'PrtExit()': ['<esc>', '<c-c>', '<c-g>'] }
-let g:ctrlp_working_path_mode = 'a'
-set noautochdir
-
-" tags
+" guttentags
 let g:gutentags_ctags_tagfile = ".tags"
+
+" ALE
+source ~/.vim/c.vim " ale config for C
+
+" tmuxline
+let g:tmuxline_theme = 'lightline'

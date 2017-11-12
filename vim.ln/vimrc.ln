@@ -15,7 +15,7 @@ autocmd BufEnter * set relativenumber
 set encoding=utf-8
 set number				" adds numbers to left side
 " set clipboard=unnamed	" clipboard to anywhere
-set tabstop=4			" number of visual tabs
+set tabstop=4			" number of visual tabs, so crucify me
 set shiftwidth=4		" number of spaces for 1 tab
 set cursorline			" show line of cursor
 set showmatch			" highlights matching brackets
@@ -44,9 +44,14 @@ set t_Co=256 " this line fixes color problems for vim inside tmux
 " hi Normal           guifg=#e6e1de ctermfg=none gui=none
 
 
-" 42 syntax highlighting
+" 42-style C syntax highlighting
 autocmd BufEnter * syntax match cType "\<[t]_\w\+\>"
 autocmd BufEnter * syntax match cType "\<\w\+_[t]\>"
+" libmill syntax highlightinh
+autocmd BufEnter * syntax match cType "\<chan\>"
+autocmd BufEnter * syntax match cType "\<coroutine\>"
+autocmd BufEnter * syntax match cStructure "\<choose\>"
+autocmd BufEnter * syntax match cStructure "\<end\>"
 
 " paste Function
 if &term =~ "xterm.*"

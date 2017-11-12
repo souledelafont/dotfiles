@@ -24,17 +24,17 @@ zstyle ':prezto:*:*' color 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'completion' \
-  'syntax-highlighting' \
-  'history-substring-search' \
-  'prompt'
+		   'environment' \
+		   'terminal' \
+		   'editor' \
+		   'history' \
+		   'directory' \
+		   'spectrum' \
+		   'utility' \
+		   'completion' \
+		   'syntax-highlighting' \
+		   'history-substring-search' \
+		   'prompt'
 
 #
 # Autosuggestions
@@ -51,7 +51,7 @@ zstyle ':prezto:load' pmodule \
 # zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Allow the zsh prompt context to be shown.
 #zstyle ':prezto:module:editor' ps-context 'yes'
@@ -97,7 +97,7 @@ zstyle ':prezto:load' pmodule \
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'agnoster'
+		   zstyle ':prezto:module:prompt' theme 'agnoster'
 
 # Set how themes that use promptpwd function display the pwd, can be 'short', 'long', or 'full'
 # zstyle ':prezto:module:prompt' pwd-length 'short'
@@ -114,7 +114,7 @@ zstyle ':prezto:module:prompt' theme 'agnoster'
 #
 
 # Auto switch the Python virtualenv on directory change.
-zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
+		   zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 #
 # Screen
@@ -131,7 +131,7 @@ zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 #
 
 # Set the SSH identities to load into the agent.
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+		   zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
 
 #
 # Syntax Highlighting
@@ -139,22 +139,23 @@ zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'pattern' \
-  'line' \
-  'root'
-#
+		   zstyle ':prezto:module:syntax-highlighting' highlighters \
+			   'main' \
+			   'brackets' \
+			   'pattern' \
+			   'line' \
+			   'root'
+
 # Set syntax highlighting styles.
-# zstyle ':prezto:module:syntax-highlighting' styles \
-#   'builtin' 'bg=blue' \
-#   'command' 'bg=blue' \
-#   'function' 'bg=blue'
-#
+		   zstyle ':prezto:module:syntax-highlighting' styles \
+			   'builtin' 'fg=yellow' \
+			   'command' 'fg=green' \
+			   'function' 'fg=blue' \
+			   'alias' 'fg=blue'
+
 # Set syntax pattern styles.
-# zstyle ':prezto:module:syntax-highlighting' pattern \
-#   'rm*-rf*' 'fg=white,bold,bg=red'
+		   zstyle ':prezto:module:syntax-highlighting' pattern \
+			   'rm*-rf*' 'fg=white,bold,bg=red'
 
 #
 # Terminal
@@ -187,3 +188,12 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 
 # Set the default session name:
 # zstyle ':prezto:module:tmux:session' name 'PREZTO DEFAULT TMUX NAME'
+
+#
+## Utility
+
+## Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
+## before deleting or overwriting files. Set to 'no' to disable this safer
+## behavior.
+
+zstyle ':prezto:module:utility' safe-ops 'no'

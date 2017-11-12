@@ -49,22 +49,6 @@ bind M\
 	set -g mouse off
 
 #----------------------------------------
-# list of plugins
-#----------------------------------------
-set -g @tpm_plugins '\
-	tmux-plugins/tpm\
-	tmux-plugins/tmux-resurrect\
-	tmux-plugins/tmux-continuum\
-	aurelien-rainone/tmux-gitbar\
-	tmuxinator/tmuxinator\
-'
-
-# initialize TMUX plugin manager
-run '~/.tmux/plugins/tpm/tpm'
-
-# set -g status-right '#[fg=red]Continuum: #{continuum_status} #[bg=black]#[fg=green] %d %b %Y%l:%M %p'
-
-#----------------------------------------
 #Resurrect and continuum
 #----------------------------------------
 set -g @resurrect-strategy-vim 'session'
@@ -86,8 +70,51 @@ set-option -ga terminal-overrides ",xterm-256color:Tc"
 set -g window-style 'fg=colour247,bg=colour236'
 set -g window-active-style 'fg=colour250,bg=black'
  
-#pane border
+# pane border
 set -g pane-border-bg colour235
 set -g pane-border-fg colour238
 set -g pane-active-border-bg colour236
 set -g pane-active-border-fg colour154
+
+# bar design
+set -g status-interval 0
+set -g status-fg colour240
+set -g status-bg colour233
+set -g status-left "#[fg=colour242] #{host} "
+set -g status-right "#[fg=colour242]:#{session_name}:#{window_index}.#{pane_index} "
+set -g window-status-format "#[bg=colour233,fg=colour240]  ⋅#I⋅ #W "
+set -g window-status-current-format "#[bg=colour233,fg=colour240,nobold] 《#I》#W #[fg=black,bg=colour233,nobold]"
+set -g window-status-current-bg colour39
+set -g window-status-current-fg colour235
+set -g window-status-activity-bg colour245 # fg and bg are flipped here due to
+set -g window-status-activity-fg colour233 # a bug in tmux
+set -g window-status-separator ""
+set -g status-justify centre
+set -g pane-border-bg default
+set -g pane-border-fg colour238
+set -g pane-active-border-bg default
+set -g pane-active-border-fg colour39
+set -g display-panes-colour colour233
+set -g display-panes-active-colour colour245
+set -g clock-mode-colour colour39
+set -g clock-mode-style 24
+set -g message-bg black
+set -g message-fg colour39
+set -g message-command-bg colour233
+set -g message-command-fg black
+set -g mode-bg colour39
+set -g mode-fg colour232
+
+#----------------------------------------
+# list of plugins
+#----------------------------------------
+set -g @tpm_plugins '\
+	tmux-plugins/tpm\
+	tmux-plugins/tmux-resurrect\
+	tmux-plugins/tmux-continuum\
+	aurelien-rainone/tmux-gitbar\
+	tmuxinator/tmuxinator\
+'
+
+# initialize TMUX plugin manager
+run '~/.tmux/plugins/tpm/tpm'
