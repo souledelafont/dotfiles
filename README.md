@@ -22,12 +22,11 @@ make re
 
 ## components
 
-All the exterior components are implemented as `git submodules`.
+All the exterior components are implemented as `git submodules`. except vim-plug which holds in a single file.
 
 | Component | What is it ? |
 |--------|-----|
 | [base16-shell](https://github.com/JohnMorales/base16-shell.git) | Awesome colors |
 | [powerline fonts](https://github.com/powerline/fonts.git) | Awesome fonts |
 | [prezto](https://github.com/sorin-ionescu/prezto) (faster than oh-my-zsh) | ZSH framework |
-| [vundle](https://github.com/VundleVim/Vundle.vim.git) | Vim plugin manager |
 | [tpm](https://github.com/tmux-plugins/tpm.git) | Tmux plugin manager |
