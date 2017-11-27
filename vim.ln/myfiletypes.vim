@@ -1,9 +1,10 @@
 " filetype specific settings
 
 augroup filetype
-	au! BufRead,BufNewFile *.gp		set filetype=gnuplot	" added at UPMC 2016
-	au! BufRead,BufNewFile *.sh		set filetype=zsh		" added at 42 2016
-	au! BufRead,BufNewFile *.aidl	set filetype=java		" added at Tempow 2017
+	au! BufRead,BufNewFile *.gp		set filetype=gnuplot	" added at UPMC circa 2016
+	au! BufRead,BufNewFile *.sh		set filetype=zsh		" added at 42 circa 2016
+	au! BufRead,BufNewFile *.aidl	set filetype=java		" added at Tempow crica 2017
+	au! BufRead,BufNewFile *.docker	set filetype=dockerfile	" added at 42 circa 2017
 augroup END
 
 " tpope/vim-commentary settings

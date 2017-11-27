@@ -4,3 +4,10 @@ Host zamok
 Host github
 	HostName https://github.com/jzck
 	User jzck
+Host docker-ubuntu
+  HostName 0.0.0.0
+  Port 12345
+  User dev
+  ForwardAgent true
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null

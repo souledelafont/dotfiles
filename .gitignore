@@ -5,9 +5,9 @@
 # *.[oa]
 # *~
 vim.ln/plugged/*
-!vim.ln/bundle/Vundle.vim
 zsh/oh-my-zsh.ln/themes/bullet*
 tmux.ln/plugins/*
 tmux.ln/resurrect
 !tmux.ln/plugins/tpm
 ssh.ln/known_hosts
+zsh/zprezto.ln
