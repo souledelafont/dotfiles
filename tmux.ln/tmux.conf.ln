@@ -112,8 +112,6 @@ set -g @tpm_plugins '\
 	tmux-plugins/tpm\
 	tmux-plugins/tmux-resurrect\
 	tmux-plugins/tmux-continuum\
-	aurelien-rainone/tmux-gitbar\
-	tmuxinator/tmuxinator\
 '
 
 # initialize TMUX plugin manager
