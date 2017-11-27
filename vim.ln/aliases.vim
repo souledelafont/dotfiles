@@ -37,20 +37,30 @@ for i in range(1,9)
 endfor
 
 " dotfile navigation
+nnoremap <leader>eis :edit ~/dotfiles/install.sh<cr>
+
+" vim
 nnoremap <leader>evr :edit $MYVIMRC<cr>
 nnoremap <leader>evp :edit ~/.vim/plugins.vim<cr>
 nnoremap <leader>eva :edit ~/.vim/aliases.vim<cr>
 nnoremap <leader>evf :edit ~/.vim/myfiletypes.vim<cr>
 nnoremap <leader>evc :edit ~/.vim/c.vim<cr>
 
+" zsh
 nnoremap <leader>ezr :edit ~/.zshrc<cr>
 nnoremap <leader>ezpr :edit ~/dotfiles/zsh/zpreztorc.ln<cr>
 nnoremap <leader>eza :edit ~/dotfiles/zsh/aliases.zsh<cr>
 nnoremap <leader>ezc :edit ~/dotfiles/zsh/quick-compile.zsh<cr>
 
+" tmux
 nnoremap <leader>etc :edit ~/.tmux.conf<cr>
 nnoremap <leader>etz :edit ~/.tmux/tmux.zsh<cr>
 
+" docker
+nnoremap <leader>edz :edit ~/dotfiles/docker/docker.zsh<cr>
+nnoremap <leader>edu :edit ~/dotfiles/docker/ubuntu-dev.docker<cr>
+
+" git
 nnoremap <leader>egz :edit ~/dotfiles/git/git.zsh<cr>
 nnoremap <leader>ega :edit ~/dotfiles/git/aliases.zsh<cr>
 nnoremap <leader>egcg :edit ~/.gitconfig<cr>
@@ -59,5 +69,6 @@ nnoremap <leader>egcl :edit .git/config<cr>
 nnoremap <leader>egel :edit .git/info/exclude<cr>
 nnoremap <leader>egi :edit .gitignore<cr>
 
+" colors/fonts
 nnoremap <leader>ecz :edit ~/.colors/colors.zsh<cr>
 nnoremap <leader>efz :edit ~/.fonts/fonts.zsh<cr>

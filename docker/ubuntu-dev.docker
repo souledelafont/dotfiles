@@ -12,6 +12,9 @@ RUN echo "debconf debconf/frontend select Teletype" | debconf-set-selections &&\
 		tmux \
 		man \
 		make \
+		curl \
+		libcap2-bin \			#setcap, getcap
+		iputils-ping \
 		python-dev \
 		ctags \
 		ca-certificates \
