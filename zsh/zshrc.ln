@@ -1,5 +1,6 @@
 dotfilesdir=~/dotfiles
 
+export LC_ALL=en_US.UTF-8	# override the profile defined locale to the silly triangle prompt
 export EDITOR=vim
 export MAIL=jack@crans.org
 

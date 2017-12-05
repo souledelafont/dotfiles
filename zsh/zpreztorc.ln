@@ -97,6 +97,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
+export DEFAULT_USER="nobody"
 		   zstyle ':prezto:module:prompt' theme 'agnoster'
 
 # Set how themes that use promptpwd function display the pwd, can be 'short', 'long', or 'full'
@@ -197,3 +198,20 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 ## behavior.
 
 zstyle ':prezto:module:utility' safe-ops 'no'
+
+prompt_agnoster_main() {
+	RETVAL=$?
+	CURRENT_BG='NONE'
+	prompt_status
+	prompt_context
+	prompt_virtualenv
+	prompt_dir
+	prompt_git
+	prompt_end
+}
+zstyle ':prezto:module:utility' safe-ops no
+setopt nocorrect
+
+#terminals dont share history
+setopt no_share_history
+unsetopt share_history
