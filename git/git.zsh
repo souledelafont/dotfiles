@@ -1,3 +1,5 @@
+alias g='git'
+
 # core and user
 git config --global user.name "Jack Halford"
 git config --global user.email jack@crans.org

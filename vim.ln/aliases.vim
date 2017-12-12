@@ -36,21 +36,19 @@ for i in range(1,9)
 	execute 'nnoremap <leader>'.i.' '.i.'gt'
 endfor
 
-" dotfile navigation
-nnoremap <leader>eis :edit ~/dotfiles/install.sh<cr>
+" dotfile install script
+nnoremap <leader>ein :edit ~/dotfiles/install.sh<cr>
 
 " vim
 nnoremap <leader>evr :edit $MYVIMRC<cr>
 nnoremap <leader>evp :edit ~/.vim/plugins.vim<cr>
 nnoremap <leader>eva :edit ~/.vim/aliases.vim<cr>
 nnoremap <leader>evf :edit ~/.vim/myfiletypes.vim<cr>
-nnoremap <leader>evc :edit ~/.vim/c.vim<cr>
 
 " zsh
 nnoremap <leader>ezr :edit ~/.zshrc<cr>
 nnoremap <leader>ezpr :edit ~/dotfiles/zsh/zpreztorc.ln<cr>
 nnoremap <leader>eza :edit ~/dotfiles/zsh/aliases.zsh<cr>
-nnoremap <leader>ezc :edit ~/dotfiles/zsh/quick-compile.zsh<cr>
 
 " tmux
 nnoremap <leader>etc :edit ~/.tmux.conf<cr>
@@ -68,6 +66,11 @@ nnoremap <leader>egeg :edit ~/.gitexclude<cr>
 nnoremap <leader>egcl :edit .git/config<cr>
 nnoremap <leader>egel :edit .git/info/exclude<cr>
 nnoremap <leader>egi :edit .gitignore<cr>
+
+" mutt
+nnoremap <leader>emr :edit ~/.mutt/muttrc<cr>
+nnoremap <leader>emc :edit ~/.mutt/mailcap<cr>
+nnoremap <leader>emb :edit ~/.mutt/bin<cr>
 
 " colors/fonts
 nnoremap <leader>ecz :edit ~/.colors/colors.zsh<cr>

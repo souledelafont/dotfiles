@@ -5,7 +5,7 @@ Host github
 	HostName https://github.com/jzck
 	User jzck
 Host docker-ubuntu
-  HostName 0.0.0.0
+  HostName 192.168.99.100
   Port 12345
   User dev
   ForwardAgent true
