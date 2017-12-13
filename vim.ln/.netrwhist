@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/jhalford'
-let g:netrw_dirhist_2='/Users/jhalford/42/ftp/srcs/client'
-let g:netrw_dirhist_3='/Users/jhalford/42/ftp/srcs/server'
-let g:netrw_dirhist_4='/Users/jhalford/42/ftp/srcs/client'
-let g:netrw_dirhist_5='/Users/jhalford/42/ftp/srcs'
-let g:netrw_dirhist_6='/Users/jhalford/42/ftp/srcs/server'

@@ -8,6 +8,7 @@ augroup END
 
 " tpope/vim-commentary settings
 autocmd FileType gnuplot setlocal commentstring=#\ %s
+autocmd FileType asm setlocal commentstring=;\ %s
 " autocmd FileType C setlocal commentstring=//\ %s
 
 " Aliases quick compiling
