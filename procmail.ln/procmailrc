@@ -1,0 +1,25 @@
+#################################################################
+##                   Variables d'environnement                 ##
+#################################################################
+#
+### Paths
+# Path du dossier où sont rangés les mails
+MAILDIR="${HOME}/Mail"
+# Dossier contenant tout le garbage procmail-related
+# (le .procmailrc lui-même est dans le home)
+PROCMAILDIR="${HOME}/.procmail"
+# Dossier où sont les fichiers de configuration supplémentaires pour procmail
+CONFIGDIR="${PROCMAILDIR}/rc"
+# Path du fichier de log de procmail
+LOGFILE="${PROCMAILDIR}/logs/procmail.log"
+# Verbosité du logging
+# les options sont :
+# no : pas de sortie
+# all : tous les dossiers où le mail est envoyé
+# default : log le dernier dossier où est envoyé le mail
+# C'est nécessaire pour les mails de Phabricator et ça ne peut pas faire de mal
+LOGABSTRACT="all"
+
+### Scripting
+# Shell à utiliser pour exécuter des commandes
+SHELL="/bin/bash"
