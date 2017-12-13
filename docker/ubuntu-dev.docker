@@ -1,0 +1,57 @@
+FROM ubuntu:17.04
+MAINTAINER Jack Halford <jack@crans.org>
+
+# Start by changing the apt output, as stolen from Discourse's Dockerfiles.
+RUN echo "debconf debconf/frontend select Teletype" | debconf-set-selections &&\
+    apt-get update && \
+	apt-get install -y \
+		sudo \
+		git \
+		zsh \
+		vim \
+		tmux \
+		man \
+		make \
+		curl \
+		libcap2-bin \			#setcap, getcap
+		iputils-ping \
+		python-dev \
+		ctags \
+		ca-certificates \
+		openssh-client \
+		build-essential 
+
+#######################
+# SSH
+#######################
+
+EXPOSE 22
+
+# the daemon
+RUN apt-get install -y openssh-server && \
+	mkdir /var/run/sshd && \
+	echo "AllowAgentForwarding yes" >> /etc/ssh/sshd_config
+
+RUN	apt-get install -y locales &&\
+	locale-gen --purge en_US.UTF-8 &&\
+	update-locale LANG=en_US.UTF-8
+
+# ssh keys from github api script in ruby
+RUN apt-get install -y ruby && \
+	gem install github-auth --no-rdoc --no-ri
+ADD ssh_key_adder.rb /tmp/ssh_key_adder.rb
+
+#######################
+# dev user
+#######################
+
+RUN useradd dev -d /home/dev -m -s /bin/zsh &&\
+    adduser dev sudo && \
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+USER dev
+
+#dotfiles
+RUN git clone --recursive https://github.com/jzck/dotfiles ~/dotfiles && cd ~/dotfiles && ./install.sh
+
+CMD /tmp/ssh_key_adder.rb && sudo /usr/sbin/sshd -D
