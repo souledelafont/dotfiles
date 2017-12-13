@@ -1,1 +1,1 @@
-"| exec /usr/bin/procmail"
+"|IFS=' '&&exec /usr/bin/procmail -f-||exit 75 #halford"

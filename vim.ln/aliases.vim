@@ -67,10 +67,12 @@ nnoremap <leader>egcl :edit .git/config<cr>
 nnoremap <leader>egel :edit .git/info/exclude<cr>
 nnoremap <leader>egi :edit .gitignore<cr>
 
-" mutt
+" Mailing-> mutt/procmail
 nnoremap <leader>emr :edit ~/.mutt/muttrc<cr>
 nnoremap <leader>emc :edit ~/.mutt/mailcap<cr>
 nnoremap <leader>emb :edit ~/.mutt/bin<cr>
+nnoremap <leader>emf :edit ~/.forward<cr>
+nnoremap <leader>epr :edit ~/.procmail/procmailrc<cr>
 
 " colors/fonts
 nnoremap <leader>ecz :edit ~/.colors/colors.zsh<cr>

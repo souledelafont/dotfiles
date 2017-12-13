@@ -1,13 +1,15 @@
 Host zamok
 	HostName zamok.crans.org
 	User halford
+
 Host github
 	HostName https://github.com/jzck
 	User jzck
+
 Host docker-ubuntu
-  HostName 192.168.99.100
-  Port 12345
-  User dev
-  ForwardAgent true
-  StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
+	HostName 192.168.99.100
+	Port 12345
+	User dev
+	ForwardAgent true
+	StrictHostKeyChecking no
+	UserKnownHostsFile=/dev/null
