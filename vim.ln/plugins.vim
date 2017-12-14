@@ -17,11 +17,12 @@ Plug 'w0rp/ale'
 
 " Testing
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'csexton/jekyll.vim'
 
 " Colors and themes
-Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'sheerun/vim-polyglot'
 
 " Stopped using
 " Plug 'edkolev/tmuxline.vim'
@@ -55,3 +56,6 @@ let g:gutentags_ctags_tagfile = ".tags"
 
 " tmuxline
 let g:tmuxline_theme = 'lightline'
+
+" Jekyll
+let g:jekyll_path = "~/Documents/jzck.github.io/"
