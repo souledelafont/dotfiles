@@ -72,7 +72,7 @@ nnoremap <leader>emr :edit ~/.mutt/muttrc<cr>
 nnoremap <leader>emc :edit ~/.mutt/mailcap<cr>
 nnoremap <leader>emb :edit ~/.mutt/bin<cr>
 nnoremap <leader>emf :edit ~/.forward<cr>
-nnoremap <leader>epr :edit ~/.procmail/procmailrc<cr>
+nnoremap <leader>epr :edit ~/.procmail/procmailrc.ln<cr>
 
 " colors/fonts
 nnoremap <leader>ecz :edit ~/.colors/colors.zsh<cr>

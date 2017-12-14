@@ -1,0 +1,15 @@
+#Set on when debugging
+VERBOSE=off
+
+#Replace `mail' with your mail directory (Pine uses mail, Elm uses Mail)
+MAILDIR=$HOME/Mail
+
+#Directory for storing procmail log and rc files
+PMDIR=$HOME/.procmail
+
+LOGFILE=$PMDIR/log
+INCLUDERC=$PMDIR/rc.testing
+INCLUDERC=$PMDIR/rc.maillists
+# if no rules matched, default to inbox
+# :0:
+# $HOME/Mail/
