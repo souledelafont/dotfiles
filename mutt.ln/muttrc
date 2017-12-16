@@ -6,10 +6,11 @@ set from			= 'jack@crans.org'
 
 # config ------------------------------------------
 set mailcap_path	= ~/.mutt/mailcap
-unset record
-set postponed		= '+Drafts'
+set record			= '+archive'
+set postponed		= '+drafts'
 
 # crans imap server -------------------------------
+set mbox_type		= 'maildir'	# crans in maildir format
 set imap_user		= 'halford'
 set spoolfile		= 'imaps://imap.crans.org/INBOX'
 set folder			= 'imaps://imap.crans.org/'
@@ -24,8 +25,9 @@ color sidebar_new color221 color233
 set status_chars	= " *%A"
 set status_format	= "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
-mailboxes	+Drafts \
-			+Sent\ Messages \
+mailboxes	+drafts \
+			+sent \
+			+archive \
 			+ML.9fans
 
 # Header Options -------------------------------------
