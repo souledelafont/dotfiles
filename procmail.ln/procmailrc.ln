@@ -1,0 +1,10 @@
+#until all problems solved
+VERBOSE=on
+MAILDIR=$HOME/Mail
+
+#Directory for storing procmail log and rc files
+PMDIR=$HOME/.procmail
+
+LOGFILE=$PMDIR/log
+# INCLUDERC=$PMDIR/rc.testing
+INCLUDERC=$PMDIR/rc.lists
