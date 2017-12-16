@@ -6,13 +6,17 @@ set from			= 'jack@crans.org'
 
 # config ------------------------------------------
 set mailcap_path	= ~/.mutt/mailcap
-unset record
-set postponed		= '+Drafts'
+set record			= '+sent'
+set postponed		= '+drafts'
 
 # crans imap server -------------------------------
 set imap_user		= 'halford'
 set spoolfile		= 'imaps://imap.crans.org/INBOX'
 set folder			= 'imaps://imap.crans.org/'
+
+# crans smtp server -------------------------------
+set smtp_url		= smtps://halford@smtp.crans.org'
+
 
 # sidebar -----------------------------------------
 # set sidebar_delim   = '  │'
