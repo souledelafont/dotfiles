@@ -1,1 +1,1 @@
-alias mutt 'cd ~/Desktop && mutt'
+export MAIL=jack@crans.org

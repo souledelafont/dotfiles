@@ -1,19 +1,20 @@
+# settings specific to crans.org mail servers
+
 set from			= 'jack@crans.org'
-set mbox_type		= 'maildir'	# crans in maildir format
+set mbox_type		= 'maildir'
 set record			= '+sent'
+set trash			= '+archive'
 set postponed		= '+drafts'
 set imap_user		= 'halford'
 
-# imap -------------------------------
 set spoolfile		= 'imaps://imap.crans.org/INBOX'
 set folder			= 'imaps://imap.crans.org/'
 
-# smtp -------------------------------
 set smtp_url		= smtps://halford@smtp.crans.org'
 
-# boxes
 mailboxes	+INBOX \
 			+drafts \
 			+sent \
 			+archive \
+			+lists \
 			+lists.9fans

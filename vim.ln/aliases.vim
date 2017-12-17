@@ -71,6 +71,7 @@ nnoremap <leader>egi :edit .gitignore<cr>
 nnoremap <leader>emr :edit ~/.mutt/muttrc<cr>
 nnoremap <leader>emc :edit ~/.mutt/mailcap<cr>
 nnoremap <leader>emb :edit ~/.mutt/bin<cr>
+nnoremap <leader>emz :edit ~/.mutt/mutt.zsh<cr>
 nnoremap <leader>emf :edit ~/.forward<cr>
 nnoremap <leader>epr :edit ~/.procmail/procmailrc.ln<cr>
 

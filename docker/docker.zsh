@@ -2,9 +2,8 @@ alias d="docker"
 alias dm="docker-machine"
 
 # store on hard drive
-export MACHINE_STORAGE_PATH="/Volumes/Albert"
-
-eval $(docker-machine env default)
+# export MACHINE_STORAGE_PATH="/Volumes/Albert"
+# eval $(docker-machine env default)
 
 docker-run-ubuntu () {
 	port=12345

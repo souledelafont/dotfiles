@@ -1,12 +1,7 @@
 dotfilesdir=~/dotfiles
 
-export LC_ALL=en_US.UTF-8	# override the profile defined locale to the silly triangle prompt
+export LC_ALL=en_US.UTF-8
 export EDITOR=vim
-export MAIL=jack@crans.org
-
-# cross-gn bin
-export PATH="$PATH:/opt/cross/bin"
-export PATH="$PATH:$HOME/depot_tools"
 
 # personal bin
 export PATH="$HOME/.bin/:$PATH"
@@ -53,8 +48,6 @@ else
 fi
 
 endconf
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 setopt clobber	# zsh > becomes >! (sets O_TRUNC)
 alias rm='nocorrect rm'
