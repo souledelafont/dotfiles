@@ -21,9 +21,9 @@ set smtp_url		= smtps://halford@smtp.crans.org'
 
 # sidebar -----------------------------------------
 # set sidebar_delim   = '  │'
-set sidebar_visible = yes
-set sidebar_width   = 24
-color sidebar_new color221 color233
+# set sidebar_visible = yes
+# set sidebar_width   = 24
+# color sidebar_new color221 color233
 
 # Status Bar -----------------------------------------
 set status_chars	= " *%A"
@@ -41,11 +41,10 @@ unhdr_order *                           # some distros order things by default
 hdr_order from: to: cc: date: subject:  # and in this order
 
 # Index View Options ---------------------------------
-set date_format = "%d/%m"
-set index_format = "[%Z]  %D  %-20.20F  %s"
+set date_format = "%d/%m %I:%M"
+set index_format = "%2C %Z %d %-15.15F %s (%-4.4c)"
 set sort = threads                         # like gmail
 set sort_aux = reverse-last-date-received  # like gmail
-set uncollapse_jump                        # don't collapse on an unread message
 set sort_re                                # thread based on regex
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"]))
 
@@ -90,7 +89,7 @@ color indicator black cyan
 color markers	brightred black
 color quoted	green black
 color signature cyan black
-color status	brightgreen blue
+color status	yellow blue
 color tilde	blue black
 color tree	red black
 

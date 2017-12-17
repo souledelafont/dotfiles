@@ -7,4 +7,16 @@ PMDIR=$HOME/.procmail
 
 LOGFILE=$PMDIR/log
 # INCLUDERC=$PMDIR/rc.testing
-INCLUDERC=$PMDIR/rc.lists
+# INCLUDERC=$PMDIR/rc.lists
+
+:0:
+* ^TO9fans@9fans\.net
+.lists.9fans/
+
+:0:
+* ^From.*@42.fr
+.42/
+
+:0:
+* ^From.*@archlinux.org
+.
