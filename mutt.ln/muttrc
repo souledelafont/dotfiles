@@ -1,38 +1,15 @@
-# personal ---------------------------------------
+# personal -----------------------------------------
 set editor			= "vim"
 set charset			= "utf-8"
 set realname		= 'Jack Halford'
-set from			= 'jack@crans.org'
-
-# config ------------------------------------------
 set mailcap_path	= ~/.mutt/mailcap
-set record			= '+sent'
-set postponed		= '+drafts'
 
-# crans imap server -------------------------------
-set mbox_type		= 'maildir'	# crans in maildir format
-set imap_user		= 'halford'
-set spoolfile		= 'imaps://imap.crans.org/INBOX'
-set folder			= 'imaps://imap.crans.org/'
-
-# crans smtp server -------------------------------
-set smtp_url		= smtps://halford@smtp.crans.org'
-
-
-# sidebar -----------------------------------------
-# set sidebar_delim   = '  │'
-# set sidebar_visible = yes
-# set sidebar_width   = 24
-# color sidebar_new color221 color233
+# crans.org imap & smtp -----------------------------
+source ~/.mutt/crans.mutt
 
 # Status Bar -----------------------------------------
 set status_chars	= " *%A"
 set status_format	= "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
-
-mailboxes	+drafts \
-			+sent \
-			+archive \
-			+lists.9fans
 
 # Header Options -------------------------------------
 ignore *                                # ignore all headers
@@ -48,16 +25,10 @@ set sort_aux = reverse-last-date-received  # like gmail
 set sort_re                                # thread based on regex
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"]))
 
-bind index G imap-fetch-mail
-
 # Index Key Bindings ---------------------------------
+bind index n		imap-fetch-mail
 bind index gg       first-entry
 bind index G        last-entry
-
-# Sidebar Navigation ---------------------------------
-bind index,pager <down>   sidebar-next
-bind index,pager <up>     sidebar-prev
-bind index,pager <right>  sidebar-open
 
 # Pager View Options ---------------------------------
 set pager_index_lines = 10 # number of index lines to show
@@ -75,7 +46,6 @@ bind pager k  previous-line
 bind pager j  next-line
 bind pager gg top
 bind pager G  bottom
-
 bind pager R  group-reply
 
 # View attachments properly.
@@ -83,15 +53,15 @@ bind attach <return> view-mailcap
 
 #colors 
 color normal	white black
-color attachment brightyellow black
-color hdrdefault cyan black
-color indicator black cyan
+color attachment	brightyellow black
+color hdrdefault	cyan black
+color indicator	black cyan
 color markers	brightred black
 color quoted	green black
 color signature cyan black
 color status	yellow blue
-color tilde	blue black
-color tree	red black
+color tilde		blue black
+color tree		red black
 
 color index	red black ~D
 color index	magenta black ~T

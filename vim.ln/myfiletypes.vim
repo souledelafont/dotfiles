@@ -5,6 +5,7 @@ augroup filetype
 	au! BufRead,BufNewFile *.sh		set filetype=zsh		" added at 42 circa 2016
 	au! BufRead,BufNewFile *.aidl	set filetype=java		" added at Tempow crica 2017
 	au! BufRead,BufNewFile *.docker	set filetype=dockerfile	" added at 42 circa 2017
+	au! BufRead,BufNewFile *.mutt	set filetype=muttrc		" added at 42 circa 2017
 augroup END
 
 " tpope/vim-commentary settings
