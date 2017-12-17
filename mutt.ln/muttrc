@@ -32,7 +32,7 @@ set status_format	= "───[ Folder: %f ]───[%r%m messages%?n? (%n new)
 mailboxes	+drafts \
 			+sent \
 			+archive \
-			+ML.9fans
+			+lists.9fans
 
 # Header Options -------------------------------------
 ignore *                                # ignore all headers
@@ -61,23 +61,50 @@ bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
 
 # Pager View Options ---------------------------------
- set pager_index_lines = 10 # number of index lines to show
- set pager_context = 3      # number of context lines to show
- set pager_stop             # don't go to next message automatically
- set menu_scroll            # scroll in menus
- set tilde                  # show tildes like in vim
- unset markers              # no ugly plus signs
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
 
- set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
- alternative_order text/plain text/enriched text/html
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
 
- # Pager Key Bindings ---------------------------------
-  bind pager k  previous-line
-  bind pager j  next-line
-  bind pager gg top
-  bind pager G  bottom
- 
-  bind pager R  group-reply
- 
-  # View attachments properly.
-  bind attach <return> view-mailcap
+# Pager Key Bindings ---------------------------------
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager G  bottom
+
+bind pager R  group-reply
+
+# View attachments properly.
+bind attach <return> view-mailcap
+
+#colors 
+color normal	white black
+color attachment brightyellow black
+color hdrdefault cyan black
+color indicator black cyan
+color markers	brightred black
+color quoted	green black
+color signature cyan black
+color status	brightgreen blue
+color tilde	blue black
+color tree	red black
+
+color index	red black ~D
+color index	magenta black ~T
+
+color header	brightgreen black ^From:
+color header	brightcyan black ^To:
+color header	brightcyan black ^Reply-To:
+color header	brightcyan black ^Cc:
+color header	brightblue black ^Subject:
+
+color body	brightred black [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+# identifies email addresses
+
+color body	brightblue black (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+
+# identifies URLs
