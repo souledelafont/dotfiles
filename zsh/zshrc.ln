@@ -51,3 +51,5 @@ endconf
 
 setopt clobber	# zsh > becomes >! (sets O_TRUNC)
 alias rm='nocorrect rm'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
