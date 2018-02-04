@@ -1,0 +1,25 @@
+FROM base:archlinux
+MAINTAINER Jack Halford <jack@crans.org>
+
+RUN \
+    pacman -Sy \
+		sudo \
+		git \
+		zsh \
+		vim \
+		tmux \
+		make \
+		curl \
+
+#######################
+# dev user
+#######################
+
+RUN useradd dev -d /home/dev -m -s /bin/zsh &&\
+    adduser dev sudo && \
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+USER dev
+
+#dotfiles
+RUN git clone --recursive https://github.com/jzck/dotfiles ~/dotfiles && cd ~/dotfiles && ./install.sh
