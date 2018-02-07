@@ -6,6 +6,10 @@ Host github
 	HostName https://github.com/jzck
 	User jzck
 
+Host archtheo
+	Hostname 176.139.99.229
+	User jack
+
 Host docker-ubuntu
 	HostName 192.168.99.100
 	Port 12345
