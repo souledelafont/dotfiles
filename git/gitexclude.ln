@@ -8,6 +8,7 @@ objs
 Session.vim
 *.aux
 *.log
+build
 *.out
 .venv
 venv

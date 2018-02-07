@@ -52,7 +52,7 @@ nmap <Leader>t :Tags<CR>
 let g:gutentags_ctags_tagfile = ".tags"
 
 " ALE
-" source ~/.vim/c.vim " ale config for C
+let g:ale_linters = {'rust' : ['xargo'], 'asm' : ['nasm']}
 
 " tmuxline
 let g:tmuxline_theme = 'lightline'

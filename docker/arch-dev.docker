@@ -1,0 +1,24 @@
+# standard arch development environment
+# commit and push specific changes specific development to dockerhub
+#		jzck/arch-kernel for KFS
+
+FROM base/archlinux
+MAINTAINER Jack Halford <jack@crans.org>
+
+RUN pacman -Syyu --noconfirm
+RUN pacman-db-upgrade
+RUN pacman -S --noconfirm \
+		sudo man git zsh vim tmux ctags make binutils
+
+#######################
+# dev user
+#######################
+
+RUN useradd dev -d /home/dev -m -s /usr/bin/zsh && \
+	groupadd sudo && gpasswd -a dev sudo && \
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+RUN echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && locale-gen &&\
+	echo 'LANG=en_US.UTF-8' > /etc/locale.conf
+
+USER dev
