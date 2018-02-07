@@ -1,0 +1,9 @@
+[cargo-new]
+name = "Jack Halford"
+email = "jack@crans.org"
+vcs = "git"
+
+[alias]
+b = "build"
+t = "test"
+r = "run"

@@ -7,8 +7,6 @@ dmstart () {
 	eval $(docker-machine env default)
 }
 
-dmstart
-
 drun-kernel () {
 	docker run \
 		$* \

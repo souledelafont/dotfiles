@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 echo "Doing dotfile links now..."
 for dotfile in $(find $PWD -path "*/.git" -prune -o -name "*.ln" -print | sort);
