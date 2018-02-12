@@ -9,3 +9,5 @@ zsh/zprezto.ln
 procmail.ln/log
 cargo.ln
 !cargo.ln/config
+ssh.ln
+!ssh.ln/config
