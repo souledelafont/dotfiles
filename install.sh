@@ -10,5 +10,6 @@ do
 done
 echo "dotfile links done"
 
+echo -n "installing vim plugins..."
 vim +PlugInstall +qall >/dev/null 2>&1
-echo "vim plugins done"
+echo "done"

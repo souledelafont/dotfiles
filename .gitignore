@@ -7,3 +7,5 @@ tmux.ln/resurrect
 ssh.ln/known_hosts
 zsh/zprezto.ln
 procmail.ln/log
+cargo.ln
+!cargo.ln/config
